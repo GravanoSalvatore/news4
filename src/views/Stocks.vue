@@ -1,257 +1,231 @@
 <template lang="">
-    <br/>
-    <div class="wrap">
-      
-      
-     
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      
-
-
-
-
-
-<div class="grid">
-  <img class="stocks-logo" src="../assets/top-2.png">
-
-
-        <select class="select"  v-model="selected">
-    <option value="" disabled>Select Company</option>
-    <option v-for="value in stock" 
-    :key="value.stock" 
-    :value="value.content"
+  <div>
     
-    >
-    <a :href="value.url">{{ value.title }}</a>
-    
-  
-  </option>
 
+    <main class="my-5">
+  <div class="container">
+    <section>
+      <div class="row gx-lg-5" 
+      
+      >
+      
+        <div class="col-lg-4 col-md-12 mb-4 mb-lg-0"
+        
+        v-for="item in articles"
+      :key="item">
+         
+          <div>
+            
+            <div class="bg-image hover-overlay shadow-1-strong ripple rounded-5 mb-4" data-mdb-ripple-color="light"
+         
+            >
+              <img v-if="item.urlToImage" :src="item.urlToImage" class="img-fluid" />
+              <img v-else src="../assets//news.jpeg" class="img-fluid" />
+              
+              <a href="#!">
+                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+              </a>
+            </div>
 
-  <!-- <img :src="value.urlToImage"> -->
-    <!-- <a>{{ selected }} </a> -->
-  </select>
-  
-</div>
+            <!-- Article data -->
+            <div class="row mb-3">
+              <div class="col-6">
+                <!-- <a href="" class="text-info"> -->
+                  <!-- <i class="fas fa-plane"></i>
+                 General -->
+                
+                <!-- </a> -->
+              </div>
 
+              <!-- <div class="col-6 text-end">
+                <u> {{item.publishedAt}}</u>
+              </div> -->
+            </div>
+            
+            <a href="" class="text-dark">
+              <h5><strong><a :href="item.url" target="_blanck">{{item.title}}</a></strong></h5>
 
-  <div class="info">
-   <a >{{ selected }} </a>
-  </div>
-   
-          <div class="stock">
-    <div class="stock-item" v-for="value in stock" :key="value.stock">
-      <div class="stock-item__info">
-        <div class="stock-item__cover">
-          <img :src="value.image" :alt="value.companyName">
+             
+              <p>{{item.content}}</p>
+            </a>
+                   
+                   <u class="text-success"> {{item.source.name}}</u><br/>
+                    <u><strong style="font-family:gotic">author({{item.author}})</strong></u><br/>
+                    <u> {{item.publishedAt}}</u>
+            <hr />
+
+          </div>
+         
         </div>
-        <h3 class="stock-item__title">
-          {{ value.companyName }}
-          <span>{{ value.symbol }}</span>
-          <span class="stock-item__price">Price:{{ value.price}} $</span>
-
-<span>Mcap:{{value.mktCap}}</span>
-          <span>Exchange:{{value.exchange}}</span>
-          <span>Industry:{{value.industry}}</span>
-          <span>Ceo:{{value.ceo}}</span>
-          <span>Country:{{value.country}}</span>
-          <span>Phone:{{value.phone}}</span>
-          <span>Address:{{value.address}}</span>
-          <span>City:{{value.city}}</span>
-          <span>State:{{value.state}}</span>
-          <span><a :href="value.website" target="_blank"><strong>{{value.website}}</strong></a></span>
-
-        </h3>
-      </div>
-     </div>
-    </div>
 </div>
-<br/><br/>
+    </section>
+   
+    
+  </div>
+</main>
+
+<main class="my-5">
+    <div class="container">
+     
+      <!-- <h4 class="mb-5"><strong>Latest posts</strong></h4> -->
+      <section class="text-center"
+     
+      >
+       
+
+        <div class="row"
+       
+        >
+          <div class="col-lg-6 mb-4"  v-for="item in articles"
+      :key="item">
+            <div class="card">
+              <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                <img v-if="item.urlToImage" :src="item.urlToImage"  class="img-fluid img" />
+
+                <img v-else src="../assets//news.jpeg"  class="img-fluid img" />
+                <a href="#!">
+                  <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                </a>
+              </div>
+              <div class="card-body">
+                <h5 class="card-title"><strong><a :href="item.url" target="_blanck">{{item.title}}</a></strong></h5>
+                <p class="card-text">
+                  <u class="text-success"> {{item.source.name}}</u><br/>
+                    <u><strong style="font-family:gotic">author({{item.author}})</strong></u><br/>
+                    <u> {{item.publishedAt}}</u>
+                </p>
+               
+              </div>
+            </div>
+          </div>
+
+        
+        </div>
+
+       
+      </section>
+     
+    </div>
+  </main>
+  <!--Main layout-->
+
+
+  
+  <!--Main layout-->
+
+<hr/>
+  <ai/>
+  
+ 
+ 
+
+    
+  </div>
 </template>
-<script lang="">
- import axios from 'axios'
+<script>
+import ai from './Ai.vue'
+export default {
+  components:{
+ai
+  },
+  data() {
+    return {
+      articles: [],
+      currentPage: 1,
+      totalPages: 1,
+      rows: 6,
+    };
+  },
+  computed: {
+    // paginatedArticles() {
 
- export default {
-   name: 'Stocks',
-   data() {
-     return {
-      href:null,
-       stock: [],
-       errors: [],
-       selected: '',
-       info2:[]
-     }
-   },
+    //   const start = (this.currentPage - 1) * this.rows;
+    //   const end = start + this.rows;
+    //   return this.articles.slice(start, end);
+    // },
+  },
+  methods: {
+    async getData() {
 
-  //  mounted(){
-  //     axios
-  //      .get('https://newsapi.org/v2/top-headlines?category=business&language=en&apiKey=eb237649c2594555a26f68e392086d40&pageSize=6')
-  //     // .get(' https://newsapi.org/v2/everything?q=Apple&from=2023-08-19&sortBy=popularity&apiKey=eb237649c2594555a26f68e392086d40')
-  //      .then(response=>{
-  //          this.info2 = response.data.articles
-  //     })
-  //     .catch(error=>{
-  //       console.log(error)
-  //     })
-  // },
+      //const apiKey = 'd205e0353aed4e42b97d11c1a88207f0'
+      // const apiKey = '1fb27fc9978d48ecadb4bdc77705325e'
+      const pageSize = 6;
 
+      try {
+        const response = await fetch(
+          ` https://api-epicnews404.azurewebsites.net/Articles/TopHeadlines?SiteId=1&Page=1&&pageSize=${pageSize}`
+          //`https://newsapi.org/v2/top-headlines?category=technology&language=en&apiKey=${apiKey}&pageSize=${pageSize}`
+        );
+        const data = await response.json();
+        return data.items;
+      } catch (error) {
+        console.error('Error fetching news:', error);
+        return [];
+      }
+    },
+    async fetchNews() {
 
-   created() {
-     axios
-     .get('https://newsapi.org/v2/top-headlines?category=business&language=en&apiKey=eb237649c2594555a26f68e392086d40&pageSize=100')
-    //  .get('https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=2e9a3f2dafb44777a86c64914a83abf1&pageSize=100')
-    // //  .get('https://financialmodelingprep.com/api/v3/profile/AAPL,NVDA,TSLA,AMD,INTC,MDB,SPCE,V,DAL,DOCU,OKTA,AMZN,PINS,TRIP,GDDY,DIS,MCD,NOK,UPWK,IBM,FB,ZM,OZON,NFLX,EA,HLT,H,CCL?apikey=6c9be8fcb7df7894ba5ae48be14935fc')
-     .then(responce => {
-       this.stock = responce.data.articles
-       console.log(responce)
-     })
-     .catch(e => {
-       this.errors.push(e)
-     })
-   }
- }
+      const articles = await this.getData();
+      this.articles = articles;
+      // this.totalPages = Math.ceil(articles.length / this.rows);
+    },
+    // nextPage() {
+    //  
+    //   if (this.currentPage < this.totalPages) {
+    //     this.currentPage++;
+    //   }
+    // },
+    // prevPage() {
+    //  
+    //   if (this.currentPage > 1) {
+    //     this.currentPage--;
+    //   }
+    // },
+  },
+  mounted() {
+
+    this.fetchNews();
+  },
+}
 </script>
 <style lang="scss" scoped>
+a{
+  color: black;
+}
+a:hover{
+  text-decoration: underline;
+}
+u,a{
+  text-decoration: none;
+}
+.card {
+  border: none !important;
+  box-shadow: none !important;
+}
 
-.text{
-  position: absolute;
-  color: white;
-  font-size: 1em;
-  background-color: black;
-  margin-top: 250px;
-
+.album {
+  background-color: transparent !important;
 }
 
 
-img{
-  width: 500px;
-
+.img{
+  max-height: 300px;
+}
+a {
+  text-decoration: none;
 }
 
-p{
-  width: 500px;
-  
+#intro {
+  /* Margin to fix overlapping fixed navbar */
+  margin-top: 58px;
 }
 
-.grid-1{
-  display: grid;
-  grid-template-columns: 600px 600px;
-}
-
-
-
-
-
-
-
-
-
-
-
-.grid{
-  display: grid;
-  grid-template-columns: repeat(2,1fr);
-  margin-top: 30px;
-}
-.stocks-logo{
-  width: 400px;
-}
-
-.select{
-    padding: 8px;
-    box-shadow: 0 0 20px 0 rgb(0 0 0 / 50%);
-    font-weight: bold;
-    margin-top: 50px;
-    height: 50px;
-    margin: 10px;
-   outline: none;
-    font-size: 20px;
-    border-radius: 7px;
-    width: 600px;
-}
-.select:hover{
- background-color: rgb(3, 3, 3);
-   color: white;
-}
-.wrap{
-    margin-left: 20px;
-    margin-right: 20px;
-}
-
-.stock {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}
-.stock-item {
-    box-shadow: 0 0 20px 0 rgb(0 0 0 / 50%);
-     
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    padding: 15px 20px;
-}
-.stock-item__info {
-    display: flex;
-    align-items: center;
-}
-.stock-item__cover {
-    flex: 0 0 30px;
-    margin-right: 15px;
-}
-.stock-item__cover img {
-    width: 100%;
-}
-.stock-item__title {
-    font-size: 15px;
-    margin-top: 0;
-    margin-bottom: 0;
-}
-.stock-item__title span {
-    display: block;
-    font-weight: 400;
-    font-size: 14px;
-    color: #777;
-    margin-top: 3px;
-}
-.stock-item__price {
-    flex: 0 0 80px;
-    /* text-align: right; */
-}
-.info {
-    margin-top: 20px;
-    font-weight: bold;
-    margin-bottom: 40px;
-    
-}
-h2{
-    text-align: center;
-}
-h3{
-   margin-top: 40px; 
+@media (max-width: 991px) {
+  #intro {
+    /* Margin to fix overlapping fixed navbar */
+    margin-top: 45px;
+  }
 }
 
 
-
-
-
-  
 </style>

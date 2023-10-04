@@ -30,7 +30,7 @@ export default {
 
   mounted() {
     axios
-      .get('https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=2e9a3f2dafb44777a86c64914a83abf1&pageSize=7')
+      .get('https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=1fb27fc9978d48ecadb4bdc77705325e&pageSize=7')
       .then(response => {
         this.info = response.data.articles
       })

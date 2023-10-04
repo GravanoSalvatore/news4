@@ -1,49 +1,118 @@
-<template>
-  <br /><br />
- <img class="crypto-logo" src="../../assets/cropped-cryptonewslogo (1).png">
-  <hr />
-  <div class="grid">
 
-    <div class="news" v-for="item1 in news" :key="item1">
-      <img class="img" :src="item1.imageurl"><br />
+ <template>
+  <div>
+    <!-- <img class="crypto-logo" src="../../assets/cropped-cryptonewslogo (1).png">
+    <hr /> -->
+    <div class="grid">
+      <div class="news" v-for="item1 in paginatedNews" :key="item1.id">
+        <img class="img" :src="item1.imageurl"><br />
       <p class="p-4">
         <a class="link" :href="item1.url" target="_blank ">{{ item1.title }}</a>
       </p>
-
+      </div>
+      <pagination :current-page="currentPage" :total-pages="totalPages" @page-change="changePage"></pagination>
+    <div class="page-buttons">
+     
+      <button class="prev-bt" @click="changePage(currentPage - 1)" :disabled="currentPage === 1">Previous</button>
+      <button class="next-bt" @click="changePage(currentPage + 1)" :disabled="currentPage === totalPages">Next</button>
+     
     </div>
+    </div>
+    
   </div>
 </template>
+
 <script>
-import axios from 'axios'
+import axios from 'axios';
 
 export default {
   data() {
     return {
-      news: null
-    }
+      news: null,
+      currentPage: 1,
+      itemsPerPage: 8, // Количество новостей на странице
+    };
+  },
+  computed: {
+    paginatedNews() {
+      const startIndex = (this.currentPage - 1) * this.itemsPerPage;
+      const endIndex = startIndex + this.itemsPerPage;
+      return this.news ? this.news.slice(startIndex, endIndex) : [];
+    },
+    totalPages() {
+      return Math.ceil((this.news ? this.news.length : 0) / this.itemsPerPage);
+    },
+  },
+  methods: {
+    fetchNews() {
+      axios
+        .get('https://min-api.cryptocompare.com/data/v2/news/?categories=BTC,ETH&excludeCategories=Sponsored')
+        .then(response => {
+          this.news = response.data.Data;
+        })
+        .catch(error => {
+          console.error(error);
+        });
+    },
+    changePage(page) {
+      if (page >= 1 && page <= this.totalPages) {
+        this.currentPage = page;
+      }
+    },
   },
   mounted() {
-    axios
-      // .get( 'https://min-api.cryptocompare.com/data/v2/news/?categories=BTC,ETH&excludeCategories=Sponsored')
-      .get('https://min-api.cryptocompare.com/data/v2/news/?feeds=cryptocompare,cointelegraph,coindesk&extraParams=YourSite')
-      .then(response => {
+    this.fetchNews();
+  },
+};
+</script>
 
-        this.news = response.data.Data
-      })
-      .catch(error => {
-        console.log(error)
-      })
-
-
-
-
-
-  }
+<style lang="scss" scoped>
+pagination{
+  position: absolute;
+  left:0;
+}
+/* Ваши стили могут оставаться без изменений */
+button{
+      margin: 3px;
+      border: 2px solid #01bba8;
+    border-radius: 2px;
+    padding: 7px;
+    font-weight: bold;
+    background-image: linear-gradient(to right,#040d1d, #053684);
+    color: white;
+    box-shadow: 0 0 20px 0 rgb(0 0 0 / 50%);
+    }
+    
+      .next-bt:hover{
+        background-image: linear-gradient(to right,#040d1d, #053684);
+    color: white;
+    color: rgb(8, 242, 109);
+      }
+      .prev-bt:hover{
+        background-image: linear-gradient(to right,#040d1d, #053684);
+        color: white;
+        color: rgb(242, 47, 8);
+      }
+.page-buttons {
+  text-align: center;
+  margin-top: 20px;
 }
 
-</script>
-  
-<style lang="scss" scoped>
+.page-buttons button {
+  margin: 5px;
+}
+
+
+.page-buttons {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.page-buttons button {
+  margin: 5px;
+}
+
+
 span{
   display: flex;
   
@@ -52,6 +121,7 @@ h2{
   margin-top: 60px;
 }
 .crypto-logo{
+  position: absolute;
   width: 200px;
   margin-top: 10px;
 }
@@ -67,13 +137,15 @@ h2{
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   margin-top: 30px;
+  // background-color: #040d1d;
+  margin-left: 0;
 
 }
 
 
 .img {
-  height: 240px;
-  width: 290px;
+  height: 180px;
+  width: 270px;
   box-shadow: 0 0 20px 0 rgb(0 0 0 / 50%);
   margin: 5px;
 }
@@ -84,9 +156,10 @@ h2{
 
 
 .news {
-  /* padding-left: 20px;
-    padding-right: 20px; */
-  /* margin-top: 130px; */
+ padding-left: 20px;
+ margin-top: 30px;
+    
+  
 }
 
 .news-2 {
@@ -119,9 +192,9 @@ h2{
 
 .link {
   text-decoration: none;
-  color: black;
+  color: rgb(2, 2, 2);
   font-size: 17px;
-  width: 260px;
+  width: 270px;
   font-weight: bold;
   
 }
@@ -176,6 +249,5 @@ h2{
   @media screen and (max-width:400px) {
     width: 360px;
   }
-}</style>
-   
-
+}
+</style>

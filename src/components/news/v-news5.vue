@@ -1,7 +1,7 @@
 <template lang="">
-  <h2 class="h1">Entertainment</h2>
+  <!-- <h2 class="h1">Entertainment</h2>
 <hr/>
-<br />
+<br /> -->
  <section class="section-video-1">
  <div class="div-block-video"
  v-for="item in info"
@@ -9,15 +9,17 @@
  
    <img 
    class="main-img"
+   v-if="item.urlToImage"
    :src='item.urlToImage' :alt=' alt'>
-  
+   <img 
+   class="main-img" v-else src="../../assets/E!_News_current_logo.png">
       <p class="paragraph-block-video"
  >
 <strong class="title">   <a class="link" :href="item.url" target="_blank "> {{ item.title }} </a></strong><br />
 
-<span class="description">{{item.description}}</span>
+<!-- <span class="description">{{item.description}}</span>
 {{item.content}}<br />
-{{item.publishedAt}}
+{{item.publishedAt}} -->
   </p>
  </div>
  </section> 
@@ -33,7 +35,7 @@ export default {
   },
   mounted() {
     axios
-      .get('https://newsapi.org/v2/top-headlines?category=entertainment&language=en&apiKey=3b78f002dbc4466fb5314c295e5f268b&pageSize=1')
+      .get('https://newsapi.org/v2/top-headlines?category=entertainment&language=en&apiKey=3b78f002dbc4466fb5314c295e5f268b&pageSize=3')
       // .get('https://newsapi.org/v2/top-headlines?sources=nbc-news&apiKey=eb237649c2594555a26f68e392086d40&pageSize=1')
       .then(response => {
         this.info = response.data.articles
@@ -65,7 +67,7 @@ padding-right: 20px; */
 }
 
 .main-img {
-  width: 600px;
+  width: 200px;
   box-shadow: 0 0 20px 0 rgb(0 0 0 / 50%);
 
 }

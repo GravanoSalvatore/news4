@@ -1,44 +1,98 @@
 <template>
-  <div class="grid-3">
-    <div class="news" v-for="item1 in news" :key="item1">
-      <img class="img-3" :src="item1.imageurl"><br />
-      <p class="p-3">
-        <a class="link-3" :href="item1.url" target="_blank ">{{ item1.title }}</a>
-
-      </p>
+  <div>
+    
+    <div class="grid-3">
+      <div class="news" v-for="item1 in paginatedNews" :key="item1.id">
+        <img class="img-3" :src="item1.imageurl"><br />
+        <p class="p-3">
+          <a class="link-3" :href="item1.url" target="_blank">{{ item1.title }}</a>
+        </p>
+      </div>
     </div>
+    <pagination :current-page="currentPage" :total-pages="totalPages" @page-change="changePage"></pagination>
   </div>
 </template>
+
 <script>
-import axios from 'axios'
+import pagination from '../v-pagination.vue'
+import axios from 'axios';
 
 export default {
+  components:{pagination},
   data() {
     return {
-      news: null
-    }
+      news: [],
+      currentPage: 1,
+      itemsPerPage: 3, // Количество новостей на странице
+    };
+  },
+  computed: {
+    paginatedNews() {
+      const startIndex = (this.currentPage - 1) * this.itemsPerPage;
+      const endIndex = startIndex + this.itemsPerPage;
+      return this.news.slice(startIndex, endIndex);
+    },
+    totalPages() {
+      return Math.ceil(this.news.length / this.itemsPerPage);
+    },
+  },
+  methods: {
+    fetchNews() {
+      axios
+        .get('https://min-api.cryptocompare.com/data/v2/news/?categories=BTC,ETH&excludeCategories=Sponsored')
+        .then(response => {
+          this.news = response.data.Data || [];
+          this.changePage(1); // Установим текущую страницу на первую после загрузки данных
+        })
+        .catch(error => {
+          console.error(error);
+        });
+    },
+    changePage(page) {
+      if (page >= 1 && page <= this.totalPages) {
+        this.currentPage = page;
+      }
+    },
   },
   mounted() {
-    axios
-      .get('https://min-api.cryptocompare.com/data/v2/news/?categories=BTC,ETH&excludeCategories=Sponsored')
-      .then(response => {
+    this.fetchNews();
+  },
+};
+</script>
 
-        this.news = response.data.Data
-      })
-      .catch(error => {
-        console.log(error)
-      })
-
-
-
-
-
-  }
+<style lang="scss" scoped>
+/* Ваши стили могут оставаться без изменений */
+.page-buttons {
+  text-align: center;
+  margin-top: 20px;
 }
 
-</script>
-    
-<style lang="scss" scoped>
+.page-buttons button {
+  margin: 5px;
+}
+
+
+.page-buttons {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.page-buttons button {
+  margin: 5px;
+}
+
+
+.page-buttons {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.page-buttons button {
+  margin: 5px;
+}
+
+
+
 .p-3 {
   width: 360px;
   

@@ -1,16 +1,18 @@
 <template lang="">
-  <h2 class="h1">Science</h2><hr/>
+  <!-- <h2 class="h1">Science</h2><hr/> -->
 
-<br />
- <section class="section-video-1">
+ <!-- <section class="section-video-1">
  <div class="div-block-video"
  v-for="item in info"
   :key="item">
  
    <img 
    class="main-img"
+   v-if="item.urlToImage"
    :src='item.urlToImage' :alt=' alt'>
-  
+   <img 
+   class="main-img" 
+   v-else src="../../assets/ScienceNews_for_Students.png">
       <p class="paragraph-block-video"
  >
 <strong class="title">   <a class="link" :href="item.url" target="_blank "> {{ item.title }} </a></strong><br />
@@ -20,7 +22,8 @@
 {{item.publishedAt}}
   </p>
  </div>
- </section> 
+ </section>  -->
+ <iframe width="560" height="315" src="https://www.youtube.com/embed/22dev8NBpRQ?si=KLIDZpZG-htqOLbs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </template>
 <script>
 import axios from 'axios'
@@ -58,8 +61,8 @@ h2 {
 }
 
 .div-block-video {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  // display: grid;
+  // grid-template-columns: repeat(2, 1fr);
   /* padding-left: 20px;
 padding-right: 20px; */
 }

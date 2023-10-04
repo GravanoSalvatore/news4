@@ -4,16 +4,16 @@
       <div class="col-4-grid__block-grid"
      
       >
-        <div class="col-grid-4__block-grid-content"
+        <ul class="col-grid-4__block-grid-content"
         v-for="item in info2"
       :key="item"><span>
-          <img class="col-grid-4__block-grid-content-image img" :src='item.urlToImage' :alt=' alt'>
-          <p class="col-grid-4__block-grid-content-paragraph">
+         
+          <li class="col-grid-4__block-grid-content-paragraph">
             <a class="col-grid-4__block-grid-content-paragraph-link" 
             :href="item.url" 
             target="_blank "> {{ item.title }} </a>
-          </p>
-       </span> </div>
+          </li>
+       </span> </ul>
        
       </div>
     </div>
@@ -31,7 +31,7 @@ export default {
   },
   mounted() {
     axios
-      .get('https://newsapi.org/v2/top-headlines?category=technology&language=en&apiKey=3b78f002dbc4466fb5314c295e5f268b&pageSize=10')
+      .get('https://newsapi.org/v2/top-headlines?category=technology&language=en&apiKey=d205e0353aed4e42b97d11c1a88207f0&pageSize=8')
       // .get('https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=eb237649c2594555a26f68e392086d40&pageSize=10')
       .then(response => {
         this.info2 = response.data.articles
@@ -44,14 +44,20 @@ export default {
 
 </script>
 <style  lang="scss" scoped>
+ul{
+  margin-left: 20px;
+}
 .col-4-grid {
-  margin-top: 50px;
+  // margin-top: 50px;
   width: auto;
+  background-color: rgb(219, 225, 231);
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .col-4-grid__block-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   margin-top: 30px;
 }
 
@@ -67,10 +73,12 @@ export default {
 .col-grid-4__block-grid-content-paragraph {
   /* margin-right: 20px;
  margin-left: 20px; */
-  font-size: 16px;
+  font-size: 18px;
   width: 200px;
+  margin: 10px;
   /* padding-left: 10px;
   padding-right: 10px; */
+  font-weight: bold;
 }
 
 .col-grid-4__block-grid-content-paragraph-link {
@@ -84,20 +92,26 @@ export default {
 }
 
 .col-4-grid__block-grid {
-  @media screen and(max-width: 1000px) {
+  @media screen and(max-width: 700px) {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
-
+  @media screen and(max-width: 600px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+li{
+  @media screen and(max-width: 400px){
+    width: 180px;
+    font-size: 28px;
+    margin-left: 100px;
+  }
+}
   // @media screen and(max-width: 800px)
   // {display: grid;
   // grid-template-columns:repeat(3,1fr);
   // }
-  @media screen and(max-width: 600px) {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-  }
-
+  
 }
 
 .img {
@@ -120,25 +134,7 @@ export default {
 //     display: none;
 //   }
 // }
-.col-grid-4__block-grid-content-paragraph {
-  @media screen and (max-width: 800px) {
-    font-size: 130%;
-
-  }
-
-  @media screen and (max-width: 600px) {
-    width: 1000px;
-    font-size: 150%;
-  }
-
-  @media screen and (max-width: 500px) {
-    font-size: 180%;
-  }
-
-  @media screen and (max-width: 400px) {
-    font-size: 240%;
-  }
-}</style> 
+</style> 
 
 
 

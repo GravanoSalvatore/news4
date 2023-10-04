@@ -32,10 +32,13 @@
 </p>
       </div>
     </div>  -->
+    <v-crypto4/>
+    <v-crypto6/>
     <v-crypto2/> 
-<v-crypto3/> 
-<v-crypto4/>
-<v-crypto5/>
+    <br/>
+    <v-crypto3 :itemsPerPage="10"></v-crypto3>
+
+<!-- <v-crypto5/> -->
 
      </div>
      </div>

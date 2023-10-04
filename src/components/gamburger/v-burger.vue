@@ -1,35 +1,72 @@
-<template lang="">
-    <div class="hamburger-menu">
+ <template lang="">
+    <div class="hamburger-menu bur">
 <input id="menu__toggle" type="checkbox" />
 <label class="menu__btn" for="menu__toggle">
-<span></span>
+<span>
+  <img style="width:35px;
+              border:2px solid red;
+              border-radius:50%;
+              margin-top:10px;
+              margin-left:10px" 
+              src="../../assets/1491313929-menu_82986.png" > 
+</span>
 </label>
-<ul class="menu__box">
-<li><router-link to="/" class="menu__item" href="#">Home</router-link></li>
-<li><router-link to="/Crypto" class="menu__item" href="#">Crypto</router-link></li>
-<li><router-link to="/News" class="menu__item" href="#">News</router-link></li>
-<li><router-link to="/Exchange" class="menu__item" href="#">Exchange</router-link></li>
-<li><router-link to="/Sport" class="menu__item" href="#">Sport</router-link></li>
-<!-- <li><a class="menu__item" href="#">Partners</a></li> -->
-<li><router-link to="/Entertainment" class="menu__item" href="#">Entertainment</router-link></li>
-<li><router-link to='/Tech' class="menu__item" href="#">Technology</router-link></li>
-<li><router-link to="/Business" class="menu__item" href="#">Business</router-link></li> 
 
-<li></li>
+<div class="menu__box">
 
-</ul>
+  
+
+
+<router-link to="/" class="menu__item" href="#">Home</router-link>
+<router-link to="/Crypto" class="menu__item" href="#">Crypto</router-link>
+<router-link to="/News" class="menu__item" href="#">News</router-link>
+<router-link to="/Exchange" class="menu__item" href="#">Exchange</router-link>
+<router-link to="/Sport" class="menu__item" href="#">Sport</router-link>
+
+<router-link to="/Entertainment" class="menu__item" href="#">Entertainment</router-link>
+<router-link to='/Tech' class="menu__item" href="#">Technology</router-link>
+<router-link to="/Business" class="menu__item" href="#">Business</router-link> 
+
+<router-link to="/" class="menu__item" href="#">Articles</router-link>
+<router-link to="/Crypto" class="menu__item" href="#">Forex</router-link>
+<router-link to="/News" class="menu__item" href="#">Video</router-link>
+<router-link to="/Exchange" class="menu__item" href="#">Contact</router-link>
+<router-link to="/Sport" class="menu__item" href="#">Login</router-link>
+<router-link to="/Entertainment" class="menu__item" href="#">Science</router-link>
+<router-link to="/Entertainment" class="menu__item" href="#">Donate</router-link>
+<router-link to='/Tech' class="menu__item" href="#">About</router-link>
+<router-link to="/Business" class="menu__item" href="#">Business</router-link> 
+
+<router-link to="/Entertainment" class="menu__item" href="#">Donate</router-link>
+<router-link to='/Tech' class="menu__item" href="#">About</router-link>
+<router-link to="/Business" class="menu__item" href="#">Business</router-link> 
+<!-- <a href="#" ><img class="icon" src="../../assets/facebook256px_87144.png"></a>
+       <a href="#" ><img class="icon" src="../../assets/twitter256px_87155.png"></a>
+       <a href="#" ><img class="icon" src="../../assets/youtube256px_87148.png"></a>
+       <a href="#" ><img class="icon" src="../../assets/linkedin256px_87150.png"></a>
+     -->
+
+</div>
 </div>
 
 
 
 </template>
 <script>
+import search from '@/views/Select-2.vue'
 export default {
-    
+    components:{
+      search
+    }
 }
 </script>
 <style lang="scss" scoped>
-    /* скрываем чекбокс */
+.bur{
+  position: absolute;
+  top:20px;
+  right: 70px;
+}
+ /* скрываем чекбокс */
 #menu__toggle {
   opacity: 0;
 }
@@ -40,8 +77,8 @@ export default {
   /* используем flex для центрирования содержимого */
   align-items: center;
   /* центрируем содержимое кнопки */
-  position: fixed;
-  top: 10px;
+  position: absolute;
+  top: 0px;
   left: 20px;
   width: 26px;
   height: 26px;
@@ -51,14 +88,14 @@ export default {
 }
 
 /* добавляем "гамбургер" */
-.menu__btn>span,
+.menu__btn>span
 .menu__btn>span::before,
 .menu__btn>span::after {
   display: block;
   position: absolute;
   width: 100%;
   height: 2px;
-  background-color: rgb(4, 4, 4);
+  // background-color: rgb(244, 239, 239);
   display: none;
 
   @media screen and (max-width:1370px) {
@@ -79,40 +116,47 @@ export default {
 
 /* контейнер меню */
 .menu__box {
-  display: block;
-  position: fixed;
-  visibility: hidden;
-  margin-top: 73px;
-  left: -100%;
-  width: 300px;
-  height: 100%;
-  // margin: 0;
-  padding: 0px 0;
+
+   overflow-x: hidden;
+    overflow-y: auto;
+  display: grid;
+   grid-template-columns: repeat(5,1fr);
+   position:fixed;
+   visibility: hidden;
+  margin-top: 29px;
+   left: -100%;
+  width: auto;
+  //height: 100%;
+ border:2px solid white;
+  //  background-image: linear-gradient(to right,#040d1d, #053684);
+  background-color: #040d1d;
   list-style: none;
-  text-align: center;
-  background-color:white;
+  // text-align: center;
+  // background: white;
 font-weight: bold;
-  color:black;
+  color:white;
   // box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
   box-shadow: 0 0 20px 0 rgb(0 0 0 / 50%);
+  border-radius: 8px;
 }
 
 /* элементы меню */
 .menu__item {
-  display: block;
-  padding: 12px 24px;
-  color: rgb(1, 1, 1);
-  // font-family: Georgia, 'Times New Roman', Times, serif;
-
-
-  //  font-size: 25px;
-  font-weight: bold;
+  // display: block;
+  padding: 2px 4px;
+  color:white;
+  font-size: 18px;
+  font-family: 'Times New Roman', Times, serif;
   text-decoration: none;
+margin: 5px;
 }
 
 .menu__item:hover {
-  background-color: rgb(245, 2, 2);
-  color: white;
+  // background-image: linear-gradient(to right,#040d1d, #053684);
+  // color: white;
+  // border-radius: 7px;
+  // border: 3px solid #faa216;
+  text-decoration: underline;
 }
 
 #menu__toggle:checked~.menu__btn>span {
@@ -134,21 +178,40 @@ font-weight: bold;
   left: 0;
 }
 
-.menu__btn>span,
-.menu__btn>span::before,
-.menu__btn>span::after {
-  transition-duration: .25s;
+// .menu__btn>span,
+// .menu__btn>span::before,
+// .menu__btn>span::after {
+//   transition-duration: .25s;
+// }
+
+// .menu__box {
+//   transition-duration: .25s;
+// }
+
+// .menu__item {
+//   transition-duration: .25s;
+// }
+
+span{
+  @media screen and(max-width: 500px){
+margin-top: 60px;
+
+  }
+}
+img{
+  @media screen and (max-width: 500px){
+   
+  }
+}
+.menu__box{
+  @media screen and (max-width: 700px){
+    margin-top:80px ;
+  }
 }
 
-.menu__box {
-  transition-duration: .25s;
-}
-
-.menu__item {
-  transition-duration: .25s;
-}
+</style> 
 
 
+  
 
-
-</style>
+   

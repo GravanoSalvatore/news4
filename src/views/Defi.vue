@@ -1,172 +1,380 @@
 <template lang="">
-    <div class="wrap">
-
-      
-
-
-        
-   <img class="img" src="../assets/defi.jpeg">
-   <h1>What is DeFi: all about decentralized finance and how to make money on it</h1>
-        <p>We will tell you what decentralized finance is and how to make money on DeFi</p>
-   <p><strong>What is DeFi</strong><br/>
-DeFi is financial instruments in the form of services and applications built on the blockchain. The main task of decentralized finance is to become an alternative to the banking sector and replace the traditional technologies of the current financial system with open source protocols. That is, open access to decentralized lending and new investment platforms to a large number of people, as well as allow them to receive passive income from cryptocurrency assets.</p>
-   <p>Most existing DeFi is built on the Ethereum blockchain, and the number of new decentralized finance applications is steadily growing.
-
-A pioneering DeFi application that gained widespread popularity was the <a href="https://makerdao.com/ru/" target="_blank"><strong>MakerDAO</strong></a> platform, launched in late 2017. Since then, the total amount of funds placed in DeFi protocols (TVL, Total Value Locked) has been constantly growing, and faster. So, in May 2018, TVL was $150 million, in May 2019 - $500 million, in May 2020 - $950 million, and in November 2021 the figure reached a record $236 billion.</p><br/>
-  <div class="defi-logo">
-
-<p><strong>What is DeFi made of?</strong><br/>
-DeFi uses technologies developed in the field of blockchain. All of them have applications outside of decentralized finance, but play an important role in the DeFi ecosystem.
-
-According to a joint study by Wharton Blockchain and Digital Asset and the World Economic Forum, there are several components that DeFi is.
-
-First of all, DeFi projects are blockchains, distributed ledgers for recording transactions. Currently, most DeFi services run on the Ethereum network due to its capabilities and popularity among developers. However, DeFi activity is also growing on other blockchains.
-Next come digital assets, i.e. DeFi tokens that represent value that can be sold or transferred on the blockchain network. “Bitcoin and other cryptocurrencies were the first blockchain-based digital assets. Others have a range of functions that go beyond payments,” the study notes.
-
-The next component is wallets: software user interfaces for managing assets stored on the blockchain. With a non-custodial wallet, the user is in complete control of their funds through private keys. In the case of custodial wallets, private keys are managed by the service provider.
-Next come digital assets, i.e. DeFi tokens that represent value that can be sold or transferred on the blockchain network. “Bitcoin and other cryptocurrencies were the first blockchain-based digital assets. Others have a range of functions that go beyond payments,” the study notes.
-
-</p>
-<img src="../assets/maker.png"/>
-</div>
-
-  <p>
-
-Another important block of the ecosystem is smart contracts. It is a blockchain-based software code that executes, controls and documents relevant events and actions in accordance with predefined conditions and rules.
-
-Based on smart contracts, decentralized applications (Dapps) are created, which are often integrated with the user interface using traditional web technologies, and decentralized autonomous organizations (DAOs): organizations whose rules are defined and regulated using smart contracts.</p>
-  The next step is stablecoins (digital assets whose value is pegged to a fiat currency, a basket of fiat currencies, or other assets with a stable price).
-
-DeFi governance systems are embedded with software mechanisms that manage changes to smart contracts or other blockchain protocols. They are often based on tokens that allocate voting rights to stakeholders.
- 
-<div class="defi-logo">
-
-<p><strong>Benefits of DeFi</strong><br/>
-The market has long known the benefits of decentralized financial services.
-
-The first is decentralization: DeFi tokens allow transactions between users using many computers of other participants.
-
-The second is the absence of the human factor. Decentralized finance (DeFi) works on the basis of smart contracts, which eliminates the human factor.
-
-You can also mention transparency – the DeFi marketplace is based on source code. All transaction information is always available to any user. Therefore, such applications will easily pass an honest audit.
-
-Another significant advantage of the ecosystem, experts call inclusiveness, that is, the ability to launch a DeFi product for any project, without the permission of banks and regulators.
-
-Another strong feature of the DeFi system is its cross-border nature. Here you can use financial services without intermediaries. Loans are issued in a few clicks at home, without bureaucratic red tape and draconian interest.</p>
-<img src="../assets/aave.png"/>
-
-
-</div>
-<p><strong>Benefits of DeFi</strong><br/>
-The market has long known the benefits of decentralized financial services.
-
-The first is decentralization: DeFi tokens allow transactions between users using many computers of other participants.
-
-The second is the absence of the human factor. Decentralized finance (DeFi) works on the basis of smart contracts, which eliminates the human factor.
-
-You can also mention transparency – the DeFi marketplace is based on source code. All transaction information is always available to any user. Therefore, such applications will easily pass an honest audit.
-
-Another significant advantage of the ecosystem, experts call inclusiveness, that is, the ability to launch a DeFi product for any project, without the permission of banks and regulators.
-
-Another strong feature of the DeFi system is its cross-border nature. Here you can use financial services without intermediaries. Loans are issued in a few clicks at home, without bureaucratic red tape and draconian interest.</p>
-  <p><strong>Disadvantages of DeFi</strong><br/>
-However, this new toolkit, of course, has its drawbacks. Experts attribute low system performance to them. Blockchains are inherently slower than their centralized counterparts, resulting in the creation of additional applications. Developers of DeFi applications should consider such limitations and optimize their products accordingly.
-
-There is a high risk of user error within the system. DeFi applications transfer responsibility from intermediaries to the user. This can be a negative aspect for many. Developing products that minimize the risk of user error is especially challenging when products are deployed on top of immutable blockchain networks.
-
-Another factor of instability in an ecosystem is its randomness. Finding the most suitable application can be quite a challenge, along with this, users must have a certain skill in order to find the best one. According to experts, the challenge lies not only in building applications, but also in thinking about how ideally they can fit into the large ecosystem of decentralized finance.</p>
-  
-<div class="defi-logo">
-<p><strong>Popular DeFi projects</strong><br/>
-At the beginning of 2021, more than $30 billion was invested in DeFi projects, and after 10 months this amount reached a record $236 billion due to rising prices in the crypto market. However, then this figure dropped significantly: as of January 19, 2023, it reached $50 billion.
-
-One of the largest DeFi projects by capitalization is <a href="https://www.avax.network/" target="_blank"><strong>Avalanche</strong></a>. So, on January 19, 2022, its token is trading at $16.21, in 2022 the project has grown significantly in value against the backdrop of a partnership agreement with one of the world's largest consulting firms, Deloitte.
-
-Another DeFi project is <a href="https://uniswap.org/" target="_blank"><strong>Uniswap</strong></a> and its UNI token. Uniswap is a decentralized exchange created to combat illiquidity in the cryptocurrency market. The platform and token are powered by Ethereum. A distinctive feature of UNI is that it uses the universal ERC-20 standard, which means that the cryptocurrency can be exchanged for many other tokens.
-
-Another popular project is <a href="https://chain.link/" target="_blank"><strong>Chainlink</strong></a>. ChainLink is a blockchain network of oracles. The company cooperates with SWIFT, the world's largest intermediary in international financial transactions. Thanks to this, she has access to the databases of banks.</p>
-<img src="../assets/link.png"/>
-</div>
-<p><strong>How to make money on DeFi</strong><br/>
-Despite some instability and high risks, DeFi tokens allow you to earn money. Experts talk about three popular ways to profit from the ecosystem.
-
-Transaction commissions
-The investor places liquidity (cryptocurrency) on a decentralized crypto exchange and receives a share of the commission from trading transactions. The commission is usually 0.25-0.3% and is divided among the liquidity providers according to their share in the pool.
-
-The more active the trading is, the more commission income the protocol receives and the higher the profitability, but in many pools it can turn out to be negative. The maximum value is 0.27% for 30 days, that is, about 3.2% per annum. In smaller pools, you can earn more, but the risks are much higher.</p>
-
-<div class="defi-logo">
-
-<p><strong>Cryptolending</strong><br/>
-The investor contributes part of the funds to the pool of the lending protocol, and this money is issued as loans. This service is popular, first of all, among traders who are not satisfied with the conditions offered by the centralized crypto exchange.
-
-The borrower must place a collateral in excess of 100% of the loan amount (sometimes 150% and even 200%); in case of non-payment of the debt, this pledge is automatically liquidated (sold), so that the creditor in any case gets his money back.
-
-The yield depends on the loan currency and is constantly changing. The highest rates are usually for stablecoins, such as USDT (up to 15%).</p>  
-<img src="../assets/avalanche.webp"/>
-</div>
-
-
-<p><strong>Profitable farming</strong><br/>
-The standard scheme is as follows: an investor buys a token, most often Uniswap, and places it in a liquidity pool of some trading or landing protocol. And as a confirmation of participation in the pool, it receives special LP tokens, which are deposited (staken) on a special smart contract.
-
-Immediately after launch, projects often pay large farmer bonuses, so nominal returns can be as high as 1,000%. Gradually, the number of tokens distributed every week decreases, but the yield still remains at the level of 50-100%.
-
-It must be remembered that this profit is nominal, and the real income will depend on the price of the token.</p>
-<div class="defi-logo">
-<p><strong>How to invest in DeFi</strong><br/>
-However, before giving away your liquidity to other users, you need to enter the ecosystem. The most popular “door” is the world’s largest stablecoin by capitalization, Tether (USDT).
-
-Unfortunately, you cannot buy this stablecoin inside a DeFi application. The most reliable and at the same time the easiest way is to buy USDT with a bank card in a regulated crypto exchange. It is quite easy to register in such an exchanger, and this process will not take much time from a potential investor.
-
-Also, to participate in DeFi, you will need a MetaMask wallet, which is supported by all DeFi protocols. Next, the purchased USDT must be sent to MetaMask, and then the wallet must be linked to the selected DeFi protocol. Usually the DeFi application itself offers to do this. After establishing a connection with the wallet, you can place funds on the protocol.
-
-However, the difficulty of DeFi lies not in the mechanism for depositing funds and generating income, but in the selection of quality projects. Therefore, experts advise to remember the risks and start investing in resource applications with a small amount.</p>
-<img src="../assets//uni.png"/>
-</div>
- </div>
-</template>
-<script>
-export default {
+    <main class="container main">
+     
+     
+     
+     
+     
+     
+      <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark" style="background-image:url('https://public.bnbstatic.com/image/cms/blog/20210920/b5f14dae-fb7a-4ca7-aba3-7f5380d8342d.png')">
+        <div class="col-md-6 px-0">
+          <h1 class="display-4 h1 fst-italic" >NFT</h1>
+         </div>
+      </div>
     
-}
-</script>
-<style lang="css" scoped>
-    .wrap{
-        padding-left: 20px;
-        padding-right: 20px;
-        margin-top: 30px;
-        font-weight: bold;
-    }
-    .img{
-        width: 100%;
-    }
-    .dropdown {
- position: relative;
-display: inline-block;
- z-index: 5;
-}
+      
+      
+      
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+      
+      
+      <div class="col">
+              <div class="card shadow-sm">
+                <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="../assets/2023-03-28-17_42_10-Window (1).png" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                <div class="card-body">
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="../assets/apes.png" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+    
+                <div class="card-body">
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="../assets/2023-03-28-17_40_10-Window.png" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                <div class="card-body">
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+    
+            <div class="col">
+              <div class="card shadow-sm">
+                <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="../assets/2023-03-28-17_41_20-Window.png" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                <div class="card-body">
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="../assets/2023-03-28-17_42_54-Window.png" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+    
+                <div class="card-body">
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="../assets/apesprice.webp" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                <div class="card-body">
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+     </div>
+      
+      
+      <br/><br/>
+      
+    
+      <div class="row g-5 nft" style="background-color:#040d1d;">
+        <div class="col-md-8">
+          <h3 class="pb-4 mb-4 fst-italic border-bottom">
+            Decentralized Finance (DeFi): Revolutionizing the World of Finance
+          </h3>
+    
+          <article class="blog-post">
+    
+            <img style="background-color:white" class="bd-placeholder-img card-img-top" width="100%" height="325" src="../assets/maker.png" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+           
+           <p>Decentralized Finance (DeFi) is an emerging and exciting paradigm of financial services that eliminates intermediaries and provides users with freedom and control over their finances. DeFi leverages blockchain technology to create decentralized applications (DApps) that allow users to exchange, lend, earn, and manage their assets without the involvement of traditional financial institutions.</p>
+          
+    
 
-.dropdown-content {
-  display: none;
-  position: relative;
-  background-color:white;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  padding: 12px 16px;
-  z-index: 5;
-}
 
- .dropdown:hover .dropdown-content {
-   display: block;
-  z-index: 2;
-  position: relative;
-   opacity: 0.99;}
-   img{
-    width: 500px;
-   }
-   .defi-logo{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-   }
-</style>
+
+           <h2 class="blog-post-title">Key Principles of DeFi</h2>
+           <p>DeFi is built on several key principles:</p>
+           <ul>
+          <li>Decentralization: Unlike traditional banks and financial institutions, DeFi projects have no central authority. Instead, they utilize blockchain technology and smart contracts to automate processes and ensure transparency.
+
+
+
+        <li>Openness: DeFi projects are accessible to everyone without the need for complex bureaucracy or credit checks.
+</li>
+          <li> Interoperability: Many DeFi projects can interact with each other and use the same assets thanks to common protocols and standards.
+</li>
+<li>Programmability: Smart contracts enable the creation of intelligent and flexible financial instruments that execute automatically under specific conditions.</li>
+  </li>
+           </ul>
+          
+    <h2 class="blog-post-title">Examples of DeFi Products</h2>
+    <img style="background-color:white" class="bd-placeholder-img card-img-top" width="100%" height="325" src="../assets/uni.png" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+           
+ <ul>
+      <li>Decentralized Exchanges (DEXs): DEXs like Uniswap and SushiSwap allow users to swap cryptocurrencies directly with one another without intermediaries.
+</li>
+      <li>Decentralized Lending: Projects like MakerDAO offer borrowers the ability
+</li>
+      <li>Yield Farming: This
+    </li>
+    <li>Decentralized Insurance: Projects like Nexus Mutual offer insurance against losses
+  </li>
+    </ul>
+    <h2>Challenges and Risks</h2>
+    <p>While DeFi promises to revolutionize the financial world, it is not without its challenges and risks. Some of the key concerns include:</p>
+    <ul>
+      <li>Smart Contract Risks: DeFi relies heavily on smart contracts, which are self-executing pieces of code. While they automate processes, they are not immune to vulnerabilities or coding errors. Any flaw in a smart contract can lead to financial losses.</li>
+
+<li>Regulatory Uncertainty: As DeFi projects gain prominence, regulatory bodies worldwide are taking a closer look. The lack of clear regulations can create uncertainty and potential legal risks for DeFi users and developers.</li>
+
+<li>Market Volatility: Cryptocurrencies, which form the backbone of many DeFi projects, are known for their price volatility. This volatility can affect the value of assets locked in DeFi protocols and lead to unexpected losses.</li>
+
+<li>Liquidity Risks: DeFi relies on liquidity providers who lock their assets into smart contracts. If these providers decide to withdraw their assets suddenly, it can disrupt the operations of DeFi platforms.</li>
+
+<li>Scalability Issues: Some DeFi platforms have experienced scalability problems, leading to slow transaction times and high gas fees on the Ethereum network. These issues can deter users and limit the growth of DeFi.</li>
+    </ul>
+           
+            
+            <h3>Conclusion</h3>
+            <img style="background-color:white" class="bd-placeholder-img card-img-top" width="100%" height="225" src="../assets/avalanche.webp" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+      
+            <p>In conclusion, Decentralized Finance (DeFi) represents an exciting and transformative shift
+
+As the DeFi ecosystem continues to evolve, it is essential for users and developers to stay informed, conduct due diligence, and exercise caution. With the right precautions, DeFi has the potential to redefine how we interact with and manage our finances in the future.</p>
+           
+    
+            <p>*Disclaimer: The article should not be taken as, and is not intended to provide any investment advice. Claims made in this article do not constitute investment advice and should not be taken as such. 101 Blockchains shall not be responsible for any loss sustained by any person who relies on this article. Do your own research!</p>
+          </article>
+    
+         
+    
+        </div>
+    
+        <div class="col-md-4">
+          <div class="position-sticky" style="top: 2rem;">
+            <!-- <div class="p-4 mb-3 bg-light rounded">
+              <h4 class="fst-italic">About</h4>
+              <p class="mb-0">Customize this section to tell your visitors a little bit about your publication, writers, content, or something else entirely. Totally up to you.</p>
+            </div> -->
+    <br/><br/>
+            <div class="p-4">
+              
+              <ol class="list-unstyled mb-0">
+                <li><a href="#">OpenSea</a></li>
+                <li><a href="#">Rarible</a></li>
+                <li><a href="#">Jupiter Meta</a></li>
+                <li><a href="#">BuyUCoin</a></li>
+                <li><a href="#">NFTproX</a></li>
+                <li><a href="#">Axie Marketplace</a></li>
+                <li><a href="#">WazirX</a></li>
+                <li><a href="#">Binance NFT</a></li>
+                <!-- <li><a href="#">July 2020</a></li>
+                <li><a href="#">June 2020</a></li>
+                <li><a href="#">May 2020</a></li>
+                <li><a href="#">April 2020</a></li> -->
+              </ol>
+            </div>
+    
+            <div class="p-4">
+             
+              <ol class="list-unstyled">
+                <li><a href="#">GitHub</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Facebook</a></li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    
+    <br/><br/>
+    
+    
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+      
+      
+      <div class="col">
+              <div class="card shadow-sm">
+                <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="../assets/Jupiter-Meta-launches-art-NFTs-on-its-digital-marketplace-to-drive-social-change1.jpg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                <div class="card-body">
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="../assets/NFT_PRO_X.jpg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+    
+                <div class="card-body">
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="../assets/1_pxZDGl7qvLTwFPe75TRZXA.webp" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                <div class="card-body">
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+    
+            <div class="col">
+              <div class="card shadow-sm">
+                <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="../assets/616300d6caa878e1c348351f_header.png" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                <div class="card-body">
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="../assets/axie-marketplace.jpg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+    
+                <div class="card-body">
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="../assets/lEu1eW1Y_400x400.jpg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                <div class="card-body">
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+    
+            <div class="col">
+              <div class="card shadow-sm">
+                <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="../assets/Best-Cryptocurrency-App-why-wazirx-is-the-best.png" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                <div class="card-body">
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="../assets/buyucoin-lists-bitcoin-sv-in-india-ceo-says-scalability-is-a-key-issue-.jpg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+    
+                <div class="card-body">
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card shadow-sm">
+                <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="../assets/rarible-review-logo-big.o.avif" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                <div class="card-body">
+                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+    
+            
+    
+    
+    
+          </div>
+      
+      
+      <br/><br/>
+    </main>
+    
+    
+    
+    
+    </template>
+    <script>
+    export default {
+      
+    }
+    </script>
+    <style lang="scss" scoped>
+    .main{
+      margin-top: 100px;
+    }
+    .card{
+                    border: none !important;
+                    box-shadow: none !important;
+                }
+                .album{
+                    background-color: transparent !important;
+                }
+               .nft  p,h3,h2{
+                  color: white;
+                }
+                .nft h2{
+                  color: red;
+                }
+                ol li a{
+                  text-decoration: none;
+                }
+                ul li{
+                  color: white;
+                }
+                .h1{
+                  font-size:200px;
+                  @media screen and (max-width: 500px){
+                    font-size: 60px;
+                  }
+                }
+                .bd-placeholder-img{
+                  @media screen and(max-width:400px){
+                    height: 200px;
+                  }
+                  @media screen and(max-width:300px){
+                    height: 180px;
+                  }
+                }
+    </style>

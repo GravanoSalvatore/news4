@@ -11,9 +11,9 @@
    v-for="item in info"
     :key="item">
    
-     <img 
-     class="main-img"
-     :src='item.urlToImage' :alt=' alt'>
+    <img class="main-img" v-if="item.urlToImage" :src="item.urlToImage">
+    <img class="main-img" v-else src="../../assets/news.jpeg">
+     
     
         <p class="paragraph-block-video"
    >
@@ -53,6 +53,7 @@ export default {
 <style  lang="scss" scoped>
 .div-logo{
   display: flex;
+  margin-top: 50px;
 }
 .news-logo{
   width: 100px;

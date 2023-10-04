@@ -1,144 +1,264 @@
-<template lang="">
-  <section class="col-4-grid">
-      <div class="col-4-grid__block">
-      <div class="col-4-grid__block-grid"
-     
-      >
-        <div class="col-grid-4__block-grid-content"
-        v-for="item in info2"
-      :key="item"><span>
-          <img class="col-grid-4__block-grid-content-image img" :src='item.urlToImage' :alt=' alt'>
-          <p class="col-grid-4__block-grid-content-paragraph">
-            <a class="col-grid-4__block-grid-content-paragraph-link" 
-            :href="item.url" 
-            target="_blank "> {{ item.title }} </a>
-          </p>
-       </span> </div>
-       
-      </div>
-    </div>
-  
-</section> 
-</template>
-<script>
-import axios from 'axios'
+<template>
+  <div class="wrap">
 
+    <!-- <h2>Business</h2><hr/> -->
+    
+     <!-- <div class="grid-search">
+  <searchGrid/>
+  <search2/>
+</div>  -->
+<banerBusiness/>
+
+<!-- <forex/> -->
+
+
+
+
+   <br/><br/>
+
+
+
+
+
+
+
+    
+    
+  </div> 
+</template>
+
+<script>
+import forex from '../../Baner/v-baner-forex.vue'
+import banerBusiness from '../../Baner/v-baner-business.vue'
+ import searchGrid from '@/views/Select-3-grid.vue'
+import search2 from '@/views/Select-3.vue'
 export default {
+  components:{
+ searchGrid,
+search2,
+forex,
+banerBusiness
+  },
   data() {
     return {
-      info2: null
-    }
+      articles: [],       // Array to store articles
+      currentPage: 1,    // Current page number
+      totalPages: 1,     // Total number of pages
+      rows: 3,          // Number of articles per page
+    };
+  },
+  computed: {
+    paginatedArticles() {
+      // Calculate the range of articles to display on the current page
+      const start = (this.currentPage - 1) * this.rows;
+      const end = start + this.rows;
+      return this.articles.slice(start, end);
+    },
+  },
+  methods: {
+    async getData() {
+      // Fetch articles from the News API
+      const apiKey = 'd205e0353aed4e42b97d11c1a88207f0';
+      const pageSize = 100;
+      
+      try {
+        const response = await fetch(
+          `https://newsapi.org/v2/top-headlines?category=business&language=en&apiKey=${apiKey}&pageSize=${pageSize}`
+        );
+        const data = await response.json();
+        return data.articles;
+      } catch (error) {
+        console.error('Error fetching news:', error);
+        return [];
+      }
+    },
+    async fetchNews() {
+      // Fetch news and update component data
+      const articles = await this.getData();
+      this.articles = articles;
+      this.totalPages = Math.ceil(articles.length / this.rows);
+    },
+    nextPage() {
+      // Go to the next page
+      if (this.currentPage < this.totalPages) {
+        this.currentPage++;
+      }
+    },
+    prevPage() {
+      // Go to the previous page
+      if (this.currentPage > 1) {
+        this.currentPage--;
+      }
+    },
   },
   mounted() {
-    axios
-      .get('https://newsapi.org/v2/top-headlines?category=science&language=en&apiKey=3b78f002dbc4466fb5314c295e5f268b&pageSize=10')
-      // .get('https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=eb237649c2594555a26f68e392086d40&pageSize=10')
-      .then(response => {
-        this.info2 = response.data.articles
-      })
-      .catch(error => {
-        console.log(error)
-      })
-  }
-}
-
+    // Fetch news data when the component is mounted
+    this.fetchNews();
+  },
+};
 </script>
-<style  lang="scss" scoped>
-.col-4-grid {
-  margin-top: 50px;
-  width: auto;
+
+<style scoped lang="scss">
+.bt{
+  position: absolute;
+  top:460px;
+  background-color:white;
+    
+    border-radius: 12px;
+    padding: 7px;
+    font-weight: bold;
+    background-image: linear-gradient(to right,#040d1d, #053684);
+    color: white;
+    box-shadow: 0 0 20px 0 rgb(0 0 0 / 50%);
+  right: 810px;
 }
-
-.col-4-grid__block-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  margin-top: 30px;
+.title{
+  background-color: white;
 }
-
-.col-grid-4__block-grid-content-image {
-  width: 230px;
-  box-shadow: 0 0 20px 0 rgb(0 0 0 / 50%);
-  margin: 5px;
-  /* margin-right: 20px;
- margin-left: 20px; */
-
+.content{
+  // border:2px solid grey;
+  margin: 10px;
+  background-color: white;
+  padding: 15px;
+  // opacity: 0.7;
+  // z-index: 1;
 }
-
-.col-grid-4__block-grid-content-paragraph {
-  /* margin-right: 20px;
- margin-left: 20px; */
-  font-size: 16px;
-  width: 200px;
-  /* padding-left: 10px;
-  padding-right: 10px; */
+.content:hover{
+  opacity: 1;
 }
-
-.col-grid-4__block-grid-content-paragraph-link {
-  text-decoration: none;
-  color: black;
-  width: 200px;
+.baner{
+  position: relative;
+  top:0px;
 }
-
-.col-grid-4__block-grid-content-paragraph-link:hover {
-  text-decoration: underline;
+.baner-img{
+  width: 1200px;
+  height: 500px;
 }
-
-.col-4-grid__block-grid {
-  @media screen and(max-width: 1000px) {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-  }
-
-  // @media screen and(max-width: 800px)
-  // {display: grid;
-  // grid-template-columns:repeat(3,1fr);
-  // }
-  @media screen and(max-width: 600px) {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-  }
+.pagination{
+  position: absolute;
+  top:350px;
+  left: 950px;
 
 }
-
-.img {
-  @media screen and (max-width:1000px) {
-    width: 245px;
-  }
-
-  // @media screen and (max-width:800px)
-  // {
-  //   width: 250px;}
-
-  @media screen and (max-width:600px) {
-    width: 950px;
-  }
-
-}
-
-//   .col-grid-4__block-grid-content-paragraph{
-//   @media screen and (max-width:600px){
-//     display: none;
+//  .grid-search{
+//     display: grid;
+//     grid-template-columns: 700px 500px;
+//     padding-left: 20px;
+//     padding-right: 20px;
 //   }
+// h2{
+//   font-size: 33px;
+//   margin-left: 0px;
 // }
-.col-grid-4__block-grid-content-paragraph {
-  @media screen and (max-width: 800px) {
-    font-size: 130%;
-
+.container-content{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  
+  position: absolute;
+  top:0;
+  left:0px;
+ 
+}
+.img{
+  width: 345px;
+  height: 205px;
+  box-shadow: 0 0 20px 0 rgb(0 0 0 / 50%);
+  margin: px;
+  opacity: 1;
+}
+.img:hover{
+  opacity: 1;
+}
+.next-bt,.prev-bt{
+    margin: 13px;
+    background-color:white;
+    
+    border-radius: 2px;
+    padding: 7px;
+    font-weight: bold;
+    background-image: linear-gradient(to right,#040d1d, #053684);
+    color: white;
+    box-shadow: 0 0 20px 0 rgb(0 0 0 / 50%);
   }
-
-  @media screen and (max-width: 600px) {
-    width: 1000px;
-    font-size: 150%;
+  .next-bt:hover{
+    background-image: linear-gradient(to right,#040d1d, #053684);
+    color: white;
+    color: rgb(8, 242, 109);
+   
   }
+  .prev-bt:hover{
 
-  @media screen and (max-width: 500px) {
-    font-size: 180%;
+background-image: linear-gradient(to right,#040d1d, #053684);
+    color: white;
+    color: rgb(242, 47, 8);
+   
   }
-
-  @media screen and (max-width: 400px) {
-    font-size: 240%;
+  .wrap{
+    // margin-left: 20px;
+    // margin-right: 20px;
+    margin-top: 40px;
   }
-}</style> 
-
-
-
+  .link,.title{
+    text-decoration: none;
+    color: black;
+    width: 340px;
+    font-size: 17px;
+    font-weight: bold;
+    
+  }
+  .link:hover{
+    text-decoration: underline;
+  }
+  h5{
+    // width: 280px;
+  }
+  .wrap{
+    
+  }
+  .container-content{
+    @media screen and (max-width: 1000px){
+ 
+  grid-template-columns: repeat(3,1fr);
+ }
+ @media screen and (max-width: 700px){
+  grid-template-columns: repeat(1,1fr);
+}
+// @media screen and (max-width: 600px){
+//   grid-template-columns: repeat(1,1fr);}
+ }
+.img{
+  @media screen and(max-width: 700px){
+  width: 665px;
+   height: 400px;
+  }
+  @media screen and(max-width: 600px){
+  width: 555px;
+   height: 300px;
+  }
+}
+.grid-search{
+  @media screen and(max-width: 1000px){
+      display: none;
+    }
+  }
+  .link{
+    @media screen and (max-width:900px){
+      font-size: 22px;
+    }
+    @media screen and (max-width:600px){
+      font-size: 25px;
+    }
+    @media screen and (max-width:400px){
+      font-size: 30px;
+    }
+    @media screen and (max-width:350px){
+      font-size: 35px;
+    }
+  }
+  .next-bt,.prev-bt{
+    @media screen and(max-width:500px){
+    
+     font-size: 21px;
+    }
+  }
+</style>

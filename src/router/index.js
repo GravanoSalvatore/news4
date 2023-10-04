@@ -2,21 +2,21 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Home from "@/views/Home.vue";
 import Crypto from "@/views/Crypto.vue";
-import Sport from "@/views/Sport.vue";
+ import Sport from "@/views/Sport.vue";
 import Exchange from "@/views/Exchange.vue";
-import Defi from "@/views/Defi.vue";
+import MainCrypto from "@/views/MainCrypto.vue";
 import News from "@/views/News.vue";
-import Top from "@/views/TopCrypto.vue";
+ import People from "@/views/People.vue";
 import Nft from "@/views/Nft.vue";
 import Business from "@/views/Business.vue";
-import Ico from "@/views/Ico.vue";
+import Defi from "@/views/Defi.vue";
 import Ai from "@/views/Ai.vue";
-import Tech from "@/views/Tech.vue";
+ import Tech from "@/views/Tech.vue";
 import Entertainment from "@/views/Entertainment.vue";
 import Stocks from "@/views/Stocks.vue";
-import Sceince from '@/views/Sceince.vue';
-import Health from '@/views/Health.vue'
-import Select from '@/views/Select.vue'
+ import Science from '@/views/Science.vue';
+ import Health from '@/views/Health.vue'
+import CryptoPage from '@/views/cryptoPage.vue'
 const routes = [
   {
     path: "/",
@@ -39,22 +39,22 @@ const routes = [
     component: Exchange,
     name: "Exchange",
   },
-  {
+   {
     path: "/News",
     component: News,
     name: News,
   },
   {
-    path: "/Defi",
-    component: Defi,
-    name: "Defi",
+    path: "/MainCrypto",
+    component: MainCrypto,
+    name: "MainCrypto",
   },
   {
-    path: "/Top",
-    component: Top,
-    name: "Top",
+    path: "/People",
+    component: People,
+    name: "People",
   },
-  {
+   {
     path: "/Nft",
     component: Nft,
     name: "Nft",
@@ -65,24 +65,24 @@ const routes = [
     name: "Business",
   },
   {
-    path: "/Ico",
-    component: Ico,
-    name: "Ico",
-  },
-  {
-    path: "/Ai",
-    component: Ai,
-    name: "Ai",
-  },
-  {
-    path: "/Tech",
-    component: Tech,
-    name: "Tech",
+    path: "/Defi",
+    component:Defi,
+    name: "Defi",
   },
   {
     path: "/Stocks",
     component: Stocks,
     name: "Stocks",
+  },
+   {
+    path: "/Tech",
+    component: Tech,
+    name: "Tech",
+  },
+  {
+    path: "/CryptoPage",
+    component: CryptoPage,
+    name: "CryptoPage",
   },
   {
     path: "/Entertainment",
@@ -90,9 +90,9 @@ const routes = [
     name: "Entertainment",
   },
   {
-    path: "/Sceince",
-    component: Sceince,
-    name: "Sceince",
+    path: "/Science",
+    component: Science,
+    name: "Science",
   },
   {
     path: "/Health",
@@ -100,9 +100,9 @@ const routes = [
     name: "Health",
   },
   {
-    path: "/Select",
-    component: Select,
-    name: "Select",
+    path: "/Ai",
+    component: Ai,
+    name: "Ai",
   },
 ];
 

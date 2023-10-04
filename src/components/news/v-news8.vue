@@ -5,6 +5,7 @@
      
       >
         <div class="col-grid-4__block-grid-content"
+        style=""
         v-for="item in info2"
       :key="item">
           <img class="col-grid-4__block-grid-content-image img" :src='item.urlToImage' :alt=' alt'>
@@ -29,7 +30,7 @@ export default {
   },
   mounted() {
     axios
-      .get('https://newsapi.org/v2/top-headlines?category=sports&language=en&apiKey=3b78f002dbc4466fb5314c295e5f268b&pageSize=12')
+      .get('https://newsapi.org/v2/top-headlines?category=sports&language=en&apiKey=d205e0353aed4e42b97d11c1a88207f0&pageSize=14')
       //  .get('https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=eb237649c2594555a26f68e392086d40&pageSize=8')
       // .get(' https://newsapi.org/v2/everything?q=Apple&from=2023-08-19&sortBy=popularity&apiKey=eb237649c2594555a26f68e392086d40')
       .then(response => {
@@ -45,18 +46,22 @@ export default {
 <style  lang="scss" scoped>
 .col-4-grid {
   margin-top: 50px;
+  @media screen and(max-width: 1000px){
+    display: none;
+  }
 }
 
 .col-4-grid__block-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   margin-top: 30px;
+  padding-right: 150px;
 }
 
 .img {
   box-shadow: 0 0 20px 0 rgb(0 0 0 / 50%);
   margin: 5px;
-  width: 290px;
+  width: 250px;
   /* margin-right: 20px;
  margin-left: 20px; */
 
@@ -68,12 +73,13 @@ export default {
   font-size: 100%;
   /* padding-left: 10px;
   padding-right: 10px; */
+  width: 250px;
 }
 
 .col-grid-4__block-grid-content-paragraph-link {
   text-decoration: none;
   color: black;
-  width: 200px;
+  
   font-weight: bold;
 }
 

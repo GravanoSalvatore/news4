@@ -30,7 +30,7 @@ export default {
   },
   mounted() {
     axios
-      .get('https://newsapi.org/v2/top-headlines?category=science&language=en&apiKey=2da18b40bc0a4763aea1b549e9ea7a4a&pageSize=8')
+      .get('https://newsapi.org/v2/top-headlines?category=science&language=en&apiKey=d205e0353aed4e42b97d11c1a88207f0&pageSize=8')
       // .get(' https://newsapi.org/v2/everything?q=Apple&from=2023-08-19&sortBy=popularity&apiKey=eb237649c2594555a26f68e392086d40')
       .then(response => {
         this.info2 = response.data.articles

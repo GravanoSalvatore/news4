@@ -1,21 +1,30 @@
 <template lang="">
-    
-    <div class="news">
-        <news/>
+    <br/><br/>
+    <div><br/>
+      <general2/>
+     
+     
+      <general3/> 
+      <general4/>
+      <general/> 
     </div>
-</template>
-<script>
-// 3b78f002dbc4466fb5314c295e5f268b API news
-import news from '@/pages/news.vue';
-export default {
+    <br/><br/>
+  </template>
+  <script>
+  import general from '../components/GeneralMainPage/v-general.vue'
+  import general2 from '../components/GeneralMainPage/v-general-2.vue'
+  import general3 from '../components/GeneralMainPage/v-general-3.vue'
+  import general4 from '../components/GeneralMainPage/v-general-4.vue'
+  export default {
     components:{
-        news
+      general,
+      general2,
+      general3,
+      general4
     }
     
-}
-</script>
-<style lang="scss" scoped>
-.news{
-    margin-top: 30px;
-}
-</style>
+  }
+  </script>
+  <style lang="">
+    
+  </style>
