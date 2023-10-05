@@ -259,7 +259,7 @@
   It is important to learn about the different features of these marketplaces and identify the specific use case as per your needs. So learn more about these marketplaces and understand how these can help you for trading your digital assets.</p>
          
   
-          <p>*Disclaimer: The article should not be taken as, and is not intended to provide any investment advice. Claims made in this article do not constitute investment advice and should not be taken as such. 101 Blockchains shall not be responsible for any loss sustained by any person who relies on this article. Do your own research!</p>
+          <p class="text-danger">*Disclaimer: The article should not be taken as, and is not intended to provide any investment advice. Claims made in this article do not constitute investment advice and should not be taken as such. 101 Blockchains shall not be responsible for any loss sustained by any person who relies on this article. Do your own research!</p>
         </article>
   
        

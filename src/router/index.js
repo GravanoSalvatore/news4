@@ -1,5 +1,6 @@
 // Composables
 import { createRouter, createWebHistory } from "vue-router";
+import Ico from "@/views/Ico.vue";
 import Home from "@/views/Home.vue";
 import Crypto from "@/views/Crypto.vue";
  import Sport from "@/views/Sport.vue";
@@ -103,6 +104,11 @@ const routes = [
     path: "/Ai",
     component: Ai,
     name: "Ai",
+  },
+  {
+    path: "/Ico",
+    component: Ico,
+    name: "Ico",
   },
 ];
 

@@ -13,7 +13,7 @@
     <boots2/>
 
 
-   
+   <ico/>
 
 
     <boots5/>
@@ -36,6 +36,7 @@
     </main>
     </template>
     <script>
+    import ico from './Ico.vue'
     import stocks from './Stocks.vue'
     import test from '../components/BootstrapMainPage/v-test.vue'
      import boots1 from '../components/BootstrapMainPage/v-boots-1.vue'
@@ -60,6 +61,7 @@
     // import search2 from '@/views/Select-3.vue'
     export default {
       components:{
+        ico,
         stocks,
         test,
         boots1,

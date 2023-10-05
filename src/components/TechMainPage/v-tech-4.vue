@@ -59,7 +59,7 @@
            // `https://newsapi.org/v2/top-headlines?category=technology&language=en&apiKey=${apiKey}&pageSize=${pageSize}`
           );
   
-          // Assuming the API response has an array of articles with "urlToImage" property
+          
           this.images = response.data.items.map((article) => ({
             urlToImage: article.urlToImage,title:article.title,url:article.url,
           }));

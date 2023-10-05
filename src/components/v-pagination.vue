@@ -28,7 +28,7 @@
   </script>
   
   <style scoped>
-  /* Стили для пагинации могут быть добавлены здесь */
+ 
   .pagination {
     text-align: center;
     margin-top: 20px;

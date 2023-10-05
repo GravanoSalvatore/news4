@@ -58,13 +58,13 @@ export default {
     <br/><br/>
     <main class="my-5">
     <div class="container">
-      <!--Grid row-->
+     
       <div class="row">
-        <!--Grid column-->
+        
         <div class="col-md-9 mb-4" 
       
         >
-          <!--Section: Content-->
+         
           <section>
             
             <div class="row"  v-for="item in articles"
@@ -99,21 +99,10 @@ export default {
          
         </div>
        
-
-
-
-
-
-
-
-
-
-
-
-        <div class="col-md-3 mb-4">
-          <!--Section: Sidebar-->
+  <div class="col-md-3 mb-4">
+        
           <section class="sticky-top" style="top: 80px;">
-            <!--Section: Ad-->
+          
             <section class="text-center border-bottom pb-4 mb-4">
               <div class="bg-image hover-overlay ripple mb-4">
                 <br/><br/>
@@ -131,9 +120,7 @@ export default {
               <!-- <a role="button" class="btn btn-primary" href="https://mdbootstrap.com/docs/standard/"
                 target="_blank">GO</a> -->
             </section>
-            <!--Section: Ad-->
-
-            <!--Section: Video-->
+           
             <section class="text-center">
               <i style="color: #f92601;" class="fa-thin fa-beat-fade" >LIVE</i>
 
@@ -142,12 +129,12 @@ export default {
                   allowfullscreen></iframe>
               </div>
             </section>
-            <!--Section: Video-->
+           
           </section>
-          <!--Section: Sidebar-->
+          
         </div>
       </div>
-      <!--Grid row-->
+    
 
       
     </div>

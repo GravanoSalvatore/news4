@@ -48,10 +48,10 @@ export default {
 
   data() {
         return {
-          articles: [],       // Array to store articles
-          currentPage: 1,    // Current page number
-          totalPages: 1,     // Total number of pages
-          rows: 4,          // Number of articles per page
+          articles: [],      
+          currentPage: 1,    
+          totalPages: 1,    
+          rows: 4,         
         };
       },
       computed: {
@@ -81,26 +81,26 @@ export default {
           }
         },
         async fetchNews() {
-          // Fetch news and update component data
+         
           const articles = await this.getData();
           this.articles = articles;
           this.totalPages = Math.ceil(articles.length / this.rows);
         },
         nextPage() {
-          // Go to the next page
+          
           if (this.currentPage < this.totalPages) {
             this.currentPage++;
           }
         },
         prevPage() {
-          // Go to the previous page
+         
           if (this.currentPage > 1) {
             this.currentPage--;
           }
         },
       },
       mounted() {
-        // Fetch news data when the component is mounted
+        
         this.fetchNews();
       },
 

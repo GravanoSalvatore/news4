@@ -60,7 +60,7 @@ export default {
          // `https://newsapi.org/v2/top-headlines?category=general&language=en&apiKey=${apiKey}&pageSize=${pageSize}`
         );
 
-        // Assuming the API response has an array of articles with "urlToImage" property
+       
         this.images = response.data.map((article) => ({
           urlToImage: article.urlToImage,title:article.title,url:article.url,
         }));

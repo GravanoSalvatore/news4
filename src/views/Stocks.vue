@@ -27,7 +27,7 @@
               </a>
             </div>
 
-            <!-- Article data -->
+            
             <div class="row mb-3">
               <div class="col-6">
                 <!-- <a href="" class="text-info"> -->
@@ -107,11 +107,7 @@
      
     </div>
   </main>
-  <!--Main layout-->
-
-
-  
-  <!--Main layout-->
+ 
 
 <hr/>
   <ai/>

@@ -24,7 +24,7 @@
               <div class="card shadow-sm">
                 <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="../assets/Binance-Logo.wine_-300x160.png" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                 <div class="card-body">
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <p class="card-text"></p>
                   <div class="d-flex justify-content-between align-items-center">
                     
                     
@@ -37,7 +37,7 @@
                 <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="../assets/coinbase-wallet-1.png" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
     
                 <div class="card-body">
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <p class="card-text"></p>
                   <div class="d-flex justify-content-between align-items-center">
                     
                   </div>
@@ -48,7 +48,7 @@
               <div class="card shadow-sm">
                 <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="../assets/gemini.png" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                 <div class="card-body">
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <p class="card-text"></p>
                   <div class="d-flex justify-content-between align-items-center">
                     
                   </div>
@@ -60,7 +60,7 @@
               <div class="card shadow-sm">
                 <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="../assets/Huobi-pp-1.png" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                 <div class="card-body">
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <p class="card-text"></p>
                   <div class="d-flex justify-content-between align-items-center">
                     
                     
@@ -73,7 +73,7 @@
                 <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="../assets/Bitfinex_new-logo_colour-1-1.png" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
     
                 <div class="card-body">
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <p class="card-text"></p>
                   <div class="d-flex justify-content-between align-items-center">
                     
                   </div>
@@ -84,7 +84,7 @@
               <div class="card shadow-sm">
                 <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="../assets/Kraken-Emblem.png" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                 <div class="card-body">
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <p class="card-text"></p>
                   <div class="d-flex justify-content-between align-items-center">
                     
                   </div>
@@ -95,7 +95,7 @@
               <div class="card shadow-sm">
                 <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="../assets/lbank.png" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                 <div class="card-body">
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <p class="card-text"></p>
                   <div class="d-flex justify-content-between align-items-center">
                     
                     
@@ -107,7 +107,7 @@
               <div class="card shadow-sm">
                 <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="../assets/kucoin-review.webp" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                 <div class="card-body">
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <p class="card-text"></p>
                   <div class="d-flex justify-content-between align-items-center">
                     
                     
@@ -119,7 +119,7 @@
               <div class="card shadow-sm">
                 <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="../assets/poloniex.png" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                 <div class="card-body">
-                  <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <p class="card-text"></p>
                   <div class="d-flex justify-content-between align-items-center">
                     
                     
@@ -245,8 +245,7 @@ It offers cryptocurrency trading and storage services, as well as tools for inst
     <h2 class="blog-post-title">5.BITFINEX</h2>
     <img class="bd-placeholder-img card-img-top" width="100%" height="325" src="../assets/Bitfinex_new-logo_colour-1-1.png" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
     
-    <p>NFTproX is one of the newest NFT marketplaces that was launched in 2022 and is now providing crowdfunding services to the people. It has a user base of more than 120,000 users from around the world. It makes use of the most advanced and reliable blockchain technology, which provides the user with an opportunity to invest in various NFTs at a very low cost.
-    
+    <p>Bitfinex is a prominent cryptocurrency exchange known for its advanced trading features and liquidity. Established in 2012, it offers a wide range of cryptocurrencies for trading, including Bitcoin, Ethereum, and many altcoins. Bitfinex caters to both beginners and experienced traders, offering margin trading, lending, and a user-friendly interface. Security measures, such as cold storage and two-factor authentication, make it a trusted platform.
     </p>      
     <p>The system is protected by SSL and DDoS, and the brand offers you 24/7 customer support. The payouts here are processed daily and within the given time. There are no hidden fees or charges, as NFTproX is utterly transparent in terms of monetary rules. This platform is dedicated to motivating the artists, creators, and collectors in the world of NFTs.</p>
             <h2 class="blog-post-title">6.HUOBI</h2>

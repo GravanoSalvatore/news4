@@ -1,14 +1,6 @@
 <template lang="">
   <div>
-      <!-- <section class="py-5 text-center container">
-      <div class="row py-lg-5">
-        <div class="col-lg-6 col-md-8 mx-auto">
-          <h1 class="fw-light">Business News</h1>
-          <hr/>
-        </div>
-      </div>
-    </section>
-   -->
+      
   
   
   
@@ -106,26 +98,26 @@ export default {
         }
       },
       async fetchNews() {
-        // Fetch news and update component data
+       
         const articles = await this.getData();
         this.articles = articles;
         this.totalPages = Math.ceil(articles.length / this.rows);
       },
       nextPage() {
-        // Go to the next page
+       
         if (this.currentPage < this.totalPages) {
           this.currentPage++;
         }
       },
       prevPage() {
-        // Go to the previous page
+        
         if (this.currentPage > 1) {
           this.currentPage--;
         }
       },
     },
     mounted() {
-      // Fetch news data when the component is mounted
+     
       this.fetchNews();
     },
 }

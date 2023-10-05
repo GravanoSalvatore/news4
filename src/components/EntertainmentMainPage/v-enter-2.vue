@@ -8,8 +8,7 @@
   
       
       
-      <!-- START THE FEATURETTES -->
-  
+     
      
   
       <div class="row featurette"
@@ -19,16 +18,6 @@
         
         <div class="col-md-8">
   
-          <!-- <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" 
-          :src='item.urlToImage'
-          width="800" 
-          height="500" 
-      
-          role="img" aria-label="Placeholder: 500x500" 
-          preserveAspectRatio="xMidYMid slice" 
-          focusable="false"> -->
-          <!-- <title>Placeholder</title>
-          <rect width="100%" height="100%" fill="#eee"/> -->
          
           <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" 
             v-if="item.urlToImage"
@@ -86,15 +75,15 @@
     },
     data() {
       return {
-        articles: [],       // Array to store articles
-        currentPage: 1,    // Current page number
-        totalPages: 1,     // Total number of pages
-        rows: 1,          // Number of articles per page
+        articles: [],       
+        currentPage: 1,    
+        totalPages: 1,     
+        rows: 1,          
       };
     },
     computed: {
       paginatedArticles() {
-        // Calculate the range of articles to display on the current page
+       
         const start = (this.currentPage - 1) * this.rows;
         const end = start + this.rows;
         return this.articles.slice(start, end);
@@ -102,7 +91,7 @@
     },
     methods: {
       async getData() {
-        // Fetch articles from the News API
+       
         //const apiKey = 'd205e0353aed4e42b97d11c1a88207f0'
       // const apiKey = '1fb27fc9978d48ecadb4bdc77705325e';
         const pageSize = 100;
@@ -120,26 +109,26 @@
         }
       },
       async fetchNews() {
-        // Fetch news and update component data
+       
         const articles = await this.getData();
         this.articles = articles;
         this.totalPages = Math.ceil(articles.length / this.rows);
       },
       nextPage() {
-        // Go to the next page
+       
         if (this.currentPage < this.totalPages) {
           this.currentPage++;
         }
       },
       prevPage() {
-        // Go to the previous page
+      
         if (this.currentPage > 1) {
           this.currentPage--;
         }
       },
     },
     mounted() {
-      // Fetch news data when the component is mounted
+     
       this.fetchNews();
     },
   };

@@ -58,7 +58,7 @@
             'https://min-api.cryptocompare.com/data/v2/news/?categories=Technology,Blockchain&excludeCategories=Regulation,Mining'
           );
   
-          // Assuming the API response has an array of articles with "urlToImage" property
+          
           this.images = response.data.Data.map((article) => ({
             imageurl: article.imageurl,title:article.title,url:article.url,
           }));
