@@ -21,6 +21,7 @@
                 <p class="card-text">
                   <a :href="item.url" target="_blank">{{ item.title }}</a>
                 </p>
+                <img style="width:30px" :src="item.source_info.img"/>
                 <span class="text-success"> {{ item.source_info.name }}</span>
                 <div class="d-flex justify-content-between align-items-center">
                  
@@ -29,11 +30,11 @@
             </div>
           </div>
         </div>
-        <div class="pagination">
+        <!-- <div class="pagination">
                 <button class="prev-bt" @click="prevPage" :disabled="currentPage === 1">Previous</button>
                 <span class="page-numbers">{{ currentPage }} / {{ totalPages }}</span>
                 <button class="next-bt" @click="nextPage" :disabled="currentPage === totalPages">Next</button>
-              </div>
+              </div> -->
      
      </div>
    
@@ -52,7 +53,7 @@ export default {
           articles: [],      
           currentPage: 1,    
           totalPages: 1,    
-          rows: 15,         
+          rows: 100,         
         };
       },
       computed: {
@@ -114,6 +115,11 @@ export default {
 };
 </script>
 <style scoped>
+.card-text{
+    overflow-x: hidden;
+    overflow-y: auto;
+     height: 50px;
+  }
  h3{
    font-weight: bold;
    font-size: 28px;

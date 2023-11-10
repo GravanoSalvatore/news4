@@ -1,5 +1,6 @@
 <template>
-   <br/><br/><br/>
+      <div id="top"></div>
+   
    <div>
 
 
@@ -11,6 +12,7 @@
      <div class="album py-5 bg-light">
        <div class="container">
          <h3>BTC & ETH news</h3><hr/>
+       
          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-3">
            <div
              class="col"
@@ -29,15 +31,16 @@
                    <a :href="item.url" target="_blank">{{ item.title }}</a><br/>
                 
            </p>
-                
+           <div class="body"><a :href="item.url"  target="_blanck">{{ item.body }}</a></div>
          <div class="d-flex justify-content-between align-items-center">
                   
                  </div>
                </div>
-               <div class="body"><a :href="item.url"  target="_blanck">{{ item.body }}</a></div>
+              <div class="container mt-1">
+              <img style="width:30px" :src="item.source_info.img"/>
                <span class="text-success"> {{ item.source_info.name }}</span>
-               <span class="text-secondary"> {{ item.categories }}</span>
-               
+               <p style="font-size:10px" class="text-secondary "> {{ item.categories }}</p>
+              </div>
                <p></p>
 
               </div>
@@ -78,7 +81,13 @@
          },
        },
        methods: {
-         async getData() {
+        scrollToTop(){
+          const top = document.getElementById('top');
+          if (top){
+            top.scrollIntoView({ behavior: 'smooth' });
+          }
+        }
+,         async getData() {
            
            // const apiKey = 'd205e0353aed4e42b97d11c1a88207f0'
          
@@ -105,12 +114,14 @@
            
            if (this.currentPage < this.totalPages) {
              this.currentPage++;
+             this.scrollToTop()
            }
          },
          prevPage() {
            
            if (this.currentPage > 1) {
              this.currentPage--;
+             this.scrollToTop()
            }
          },
        },
@@ -128,6 +139,11 @@
  };
  </script>
  <style scoped>
+ .card-body{
+    overflow-x: hidden;
+    overflow-y: auto;
+     height: 250px;
+  }
  .card-text{
   font-size:18px
  }
@@ -142,24 +158,19 @@
  }
  .page-numbers{
   margin-top: 20px;
+  font-size: 10px;
 }
   .next-bt,.prev-bt{
+               font-size:10px;
                margin: 13px;
                background-color:white;
-               color: rgb(248, 2, 2);
+               /* color: rgb(248, 2, 2);
                box-shadow: 0 0 20px 0 rgb(0 0 0 / 50%);
-               border-radius: 2px;
+               border-radius: 2px; */
                padding: 7px;
                font-weight: bold;
                
-             }
-             .next-bt:hover,.prev-bt:hover{
-               background-image: linear-gradient(to right,#040d1d, #053684);
-               color: white;
-               
-               
-           
-             } 
+  }
  a{
    text-decoration: none;
    color:black;

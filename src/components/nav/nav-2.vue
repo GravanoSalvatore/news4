@@ -88,7 +88,12 @@
 
 
 </div>
-
+<span class="marquee"
+v-for="item in news2"
+:key="item"
+> <p>
+       <span style="font-size:18px;color:white">{{item.title}}{{item.content}}</span> </p>
+      </span>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top " >
   <div class="container-fluid">
      <a class="navbar-brand " href="#"><img style="width:70px" src="../../assets/e-good-news-1024x936.png"></a>
@@ -106,7 +111,7 @@
           NEWS
         </a>
         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <li><router-link to="/News" class="dropdown-item" href="#">GENERAL</router-link></li>
+          <!-- <li><router-link to="/News" class="dropdown-item" href="#">GENERAL</router-link></li> -->
           <li><router-link to="/Business" class="dropdown-item" href="#">BUSINESS</router-link></li>
           <li><router-link to="/Tech" class="dropdown-item" href="#">TECHNOLOGY</router-link></li>
          
@@ -122,11 +127,11 @@
       <li class="nav-item">
         <router-link to="/Ico" class="nav-link" href="#">ARTICLES</router-link>
       </li>
-      <li class="nav-item">
+      <!-- <li class="nav-item">
         <a class="nav-link" href="#">FOREX</a>
-      </li>
+      </li> -->
        <li class="nav-item ">
-        <router-link to="/MainCrypto" class="nav-link" href="#">
+        <router-link to="/Crypto" class="nav-link" href="#">
           CRYPTO
         </router-link>
       
@@ -148,7 +153,14 @@
         </ul>
       </li>
 
-     
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          MORE
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+         <geo/>
+        </ul>
+      </li>
       <div class="container-fluid">
     <ul class="navbar-nav">
     
@@ -205,14 +217,20 @@
         <input  v-model="searchT" 
        placeholder="Search news" 
        v-on:input="onSearchType"  
-       class="form-control me-2"  
+       class="form-control me-2 input"  
        aria-label="Search">
        
       </form>
     </div>
   </div>
 </nav>
-
+<geo/>
+<span class="marquee"
+v-for="item in news2"
+:key="item"
+> <p>
+       <span style="font-size:18px;color:white">{{item.title}}{{item.content}}</span> </p>
+      </span>
 <div class="wrap">
 <div class="div "> 
     <button @click="searchClose" class="close"><img style="width:14px" src="../../assets/1486564399-close_81512.png"></button> 
@@ -230,12 +248,21 @@
   </div> 
   </div>
 </div>
+<!-- <span class="marquee"
+v-for="item in news2"
+:key="item"
+> <p>
+       <span style="font-size:18px;color:white">{{item.title}}{{item.content}}</span> </p>
+      </span> -->
+<br/><br/><br/>    
   </div>
 </template>
 <script>
 // 1fb27fc9978d48ecadb4bdc77705325e API tech
+import geo from "../Geo.vue"
 import axios from 'axios';
 export default {
+  components:{geo},
   data(){
       return{
           news:[],
@@ -247,12 +274,14 @@ methods: {
   onSearchType: function(){
 
 const search = document.querySelector('.div').style.display='block'
-     var url = 'https://newsapi.org/v2/everything?apiKey=1fb27fc9978d48ecadb4bdc77705325e&pageSize=100' + '&q=' + this.searchT;
+//https://api-epicnews404.azurewebsites.net/Articles/TopHeadlines?PageSize=100
+
+var url = 'https://api-epicnews404.azurewebsites.net/Articles/TopHeadlines?SiteId=1&Page=1&PageSize=100' + '&q=' + this.searchT;
     
       axios
           .get(url)
           .then(response=>{
-              this.news = response.data.articles
+              this.news = response.data.items
           })
           .catch(error=>{
           console.log(error)
@@ -260,9 +289,21 @@ const search = document.querySelector('.div').style.display='block'
   },
   searchClose(){
     const searchClosed = document.querySelector('.div').style.display='none'
+    const searchClosed2 = (document.querySelector(".input").value ='');
   }
 },
- 
+mounted() {
+    axios
+      .get(
+        "https://api-epicnews404.azurewebsites.net/Articles/TopHeadlines?SiteId=1&CategoryId=3&Language=14&Page=2&PageSize=1"
+      )
+      .then((response) => {
+        this.news2 = response.data.items;
+      })
+      .catch((error) => {
+        console.log("error");
+      });
+  },
   
 }
 </script>
@@ -345,4 +386,33 @@ top:90px;
     background-color:#040d1d; 
     color: white;
   }
+  .marquee {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(1, 0, 0);
+  color: white;
+  white-space: nowrap;
+  overflow: hidden;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  z-index: 100000;
+
+  padding: 5px 0;
+}
+
+.marquee p {
+  display: inline-block;
+  padding-left: 100%; /* Push the text off the screen */
+  animation: marquee 25s linear infinite; /* Adjust the animation duration as needed */
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
 </style>

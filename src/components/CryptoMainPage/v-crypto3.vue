@@ -20,6 +20,7 @@
                 <p class="card-text">
                   <a :href="item.url" target="_blank">{{ item.title }}</a>
                 </p>
+                <img style="width:30px" :src="item.source_info.img"/>
                 <span class="text-success"> {{ item.source_info.name }}</span>
                 <div class="d-flex justify-content-between align-items-center">
                  
@@ -113,6 +114,11 @@ export default {
 };
 </script>
 <style scoped>
+.card-text{
+    overflow-x: hidden;
+    overflow-y: auto;
+     height: 50px;
+  }
 .page-numbers{
  margin-top: 20px;
  color: white;

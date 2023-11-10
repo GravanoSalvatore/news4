@@ -1,57 +1,5 @@
 
-<!-- <template>
-  <div>
-    <div>
-      <div v-for="metal in metalPrices" :key="metal">
-        <h6>{{ metal}}/USD</h6>
-         <h4>{{ formatPrice(price) }}</h4>
-      </div>
-    </div>
-  </div>
-</template>
 
-<script>
-import axios from "axios";
-
-export default {
-  data() {
-    return {
-      metalPrices: {},
-      loading: true,
-    };
-  },
-  mounted() {
-    // Replace with your Metal Price API URL and API key
-    const apiUrl = "https://api.metalpriceapi.com/v1/latest";
-    const apiKey = "7e5d57584c511e352193e9a514b5131a";
-    const metals = ["XAU", "XAG", "XPT"]; // Add XAG and XPT
-
-    // Fetch prices for multiple metals in one request
-    axios
-      .get(apiUrl, {
-        params: {
-          api_key: apiKey,
-          base: "USD", // Set base currency to USD
-          currencies: metals.join(","), // Join metals into a comma-separated string
-        },
-      })
-      .then((response) => {
-        this.metalPrices = response.data.rates;
-        this.loading = false;
-      })
-      .catch((error) => {
-        console.error("Error fetching metal prices:", error);
-        this.loading = false;
-      });
-  },
-  methods: {
-    formatPrice(price) {
-      // Format the price to two decimal places
-      return Number(price).toFixed(2);
-    },
-  },
-};
-</script> -->
 
 <template lang="">
   <div>
@@ -84,9 +32,14 @@ export default {
               <div class="col-md-8 mb-4">
                 <h5><a :href="item.url" target="_blanck">{{item.title}}</a></h5>
                 <p>
-                  <u class="text-success"> {{item.source.name}}</u><br/>
-                    <u><strong style="font-family:gotic">author({{item.author}})</strong></u><br/>
-                    <u> {{item.publishedAt}}</u>
+                  <u><strong style="font-family:gotic"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+  <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+  <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+</svg>{{item.author}}</strong></u><br/>
+                    <span class="text-body" href=""><small> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar3" viewBox="0 0 16 16">
+  <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z"/>
+  <path d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+</svg> {{ formatDateTime(item.publishedAt) }}</small></span>
                 </p>
 
               
@@ -122,12 +75,9 @@ export default {
             </section>
            
             <section class="text-center">
-              <i style="color: #f92601;" class="fa-thin fa-beat-fade" >LIVE</i>
+              <!-- <i style="color: #f92601;" class="fa-thin fa-beat-fade" >LIVE</i> -->
 
-              <div class="embed-responsive embed-responsive-16by9 shadow-4-strong">
-                <iframe class="embed-responsive-item rounded video" src="https://www.youtube.com/embed/OOtxXPaQvoM?si=ekxRZmoqMegpo1jG"
-                  allowfullscreen></iframe>
-              </div>
+             
             </section>
            
           </section>
@@ -160,6 +110,18 @@ export default {
     // },
   },
   methods: {
+    formatDateTime(dateTime) {
+        const options = {
+          year: 'numeric',
+          month: '2-digit',
+          day: '2-digit',
+          hour: '2-digit',
+          minute: '2-digit',
+          second: '2-digit',
+        }
+        return new Date(dateTime).toLocaleString(undefined, options); 
+        
+  },
     async getData() {
 
       //const apiKey = 'd205e0353aed4e42b97d11c1a88207f0'
@@ -168,7 +130,7 @@ export default {
 
       try {
         const response = await fetch(
-          ` https://api-epicnews404.azurewebsites.net/Articles/TopHeadlines?SiteId=1&Page=1&&pageSize=${pageSize}`
+          `https://api-epicnews404.azurewebsites.net/Articles/TopHeadlines?SiteId=1&CategoryId=8&Language=14&Page=1&PageSize=${pageSize}`
           //`https://newsapi.org/v2/top-headlines?category=technology&language=en&apiKey=${apiKey}&pageSize=${pageSize}`
         );
         const data = await response.json();

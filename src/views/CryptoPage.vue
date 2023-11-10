@@ -2,7 +2,10 @@
 
 <template>
   <div class="container">
-    <br/><br/><br/><br/>
+    <div id="top-of-page1"></div>
+   
+    <div>
+    <br/><br/>
     <h1><strong>Top Cryptocurrencies</strong></h1>
     <div class="row">
   
@@ -38,7 +41,7 @@
       <button class="next-bt" @click="nextPage" :disabled="currentPage === pageCount">Next</button>
     </div>
 
-
+  </div>
 
     
   </div>
@@ -69,6 +72,13 @@ export default {
     this.fetchCryptocurrencies();
   },
   methods: {
+    scrollToTop1() {
+    
+    const element1 = document.getElementById('top-of-page1');
+    if (element1) {
+      element1.scrollIntoView({ behavior: 'smooth' });
+    }
+  },
     async fetchCryptocurrencies() {
       try {
         const response = await axios.get(
@@ -76,7 +86,7 @@ export default {
           {
             params: {
               vs_currency: 'usd',
-              ids: 'bitcoin,ethereum,ripple,litecoin,cardano,polkadot,stellar,binancecoin,chainlink,bitcoin-cash,tezos,tron,theta-token,ethereum-classic,vechain,hedera-hashgraph,bitcoin-sv,neo,nem,helium,aave,decred,synthetix-network-token,elrond,icon,dai,solana,huobi-token,huobi-token,compound-ether,celsius-degree-token,yearn-finance,curve-dao-token,bittorrent,1inch,near-protocol,0x,maker,kyber-network,decentraland,quant-network,verge,shiba-inu,trust-wallet-token,ethereum-classic,siacoin,loopring,wax,sushiswap,ampleforth,fei-protocol,helium,terra,liquity-usd,aelf,injective-protocol,telos,electroneum,electric-coin-company,serum,binance-usd,augur,civic,trust-wallet-token,matic-network,tether', // Здесь добавлены идентификаторы для Matic (Polygon) и Tether (USDT)
+              ids: 'bitcoin,ethereum,ripple,litecoin,cardano,polkadot,stellar,binancecoin,chainlink,bitcoin-cash,tezos,tron,theta-token,ethereum-classic,vechain,hedera-hashgraph,bitcoin-sv,neo,nem,helium,aave,decred,synthetix-network-token,elrond,icon,dai,solana,huobi-token,huobi-token,compound-ether,celsius-degree-token,yearn-finance,curve-dao-token,bittorrent,1inch,near-protocol,0x,maker,kyber-network,decentraland,quant-network,verge,shiba-inu,trust-wallet-token,ethereum-classic,siacoin,loopring,wax,sushiswap,ampleforth,fei-protocol,helium,terra,liquity-usd,aelf,injective-protocol,telos,electroneum,electric-coin-company,serum,binance-usd,augur,civic,trust-wallet-token,matic-network,tether', 
               order: 'market_cap_desc',
               per_page: 100,
               page: 1,
@@ -92,11 +102,13 @@ export default {
     nextPage() {
       if (this.currentPage < this.pageCount) {
         this.currentPage++;
+        this.scrollToTop1()
       }
     },
     prevPage() {
       if (this.currentPage > 1) {
         this.currentPage--;
+        this.scrollToTop1()
       }
     },
   },
@@ -134,11 +146,12 @@ li {
 .next-bt {
   margin: 13px;
   background-color: white;
-  color: rgb(248, 2, 2);
-  box-shadow: 0 0 20px 0 rgb(0 0 0 / 50%);
-  border-radius: 2px;
+  // color: rgb(248, 2, 2);
+  // box-shadow: 0 0 20px 0 rgb(0 0 0 / 50%);
+  // border-radius: 2px;
   padding: 7px;
   font-weight: bold;
+  font-size:10px
 }
 .card{
  
@@ -147,11 +160,11 @@ li {
 .card:hover{
   box-shadow: 0 0 20px 0 rgb(0 0 0 / 50%);
 }
-.prev-bt:hover,
-.next-bt:hover {
-  background-image: linear-gradient(to right, #040d1d, #053684);
-  color: white;
-}
+// .prev-bt:hover,
+// .next-bt:hover {
+//   background-image: linear-gradient(to right, #040d1d, #053684);
+//   color: white;
+// }
 
 .positive-change {
   color: green;

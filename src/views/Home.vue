@@ -2,9 +2,7 @@
   
   <br/><br/>
     <main class="container">
-      <br/>
-      
-      <br/><br/>
+     
       
     <boots14/>
     <boots1/>
@@ -16,9 +14,9 @@
    <ico/>
 
 
-    <boots5/>
+    <!-- <boots5/> -->
    <br/>
-    <boots3/>
+    <!-- <boots3/> -->
     
     <boots11/>
     <hr/>
@@ -28,7 +26,7 @@
  
  
     
-    <boots7/>
+    <!-- <boots7/> -->
    
     
      <boots12/>

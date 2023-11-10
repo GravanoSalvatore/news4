@@ -12,7 +12,7 @@
           :class="{ 'carousel-item': true, active: index === 0 }"
         >
           <img v-if="item.urlToImage" :src="item.urlToImage" class="d-block w-100" alt="Image">
-          <img v-else  src="../../assets/defi.jpeg" class="d-block w-100" alt="Image">
+          <img v-else  src="../../assets/news.jpeg" class="d-block w-100" alt="Image">
      <p> <a :href="item.url" target="_blank">{{ item.title }}</a></p>
       </div>
      
@@ -23,8 +23,8 @@
         data-bs-target="#carouselExampleAutoplaying"
         data-bs-slide="prev"
       >
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
+        <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span> -->
       </button>
       <button
         class="carousel-control-next"
@@ -32,8 +32,8 @@
         data-bs-target="#carouselExampleAutoplaying"
         data-bs-slide="next"
       >
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
+        <!-- <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span> -->
       </button>
     </div>
   </div>
@@ -55,11 +55,11 @@ export default {
 
       try {
         const response = await axios.get(
-          ` https://api-epicnews404.azurewebsites.net/Articles/TopHeadlines?SiteId=1&Page=1&&pageSize=${pageSize}`
-         // `https://newsapi.org/v2/top-headlines?category=entertainment&language=en&apiKey=${apiKey}&pageSize=${pageSize}`
+          `https://api-epicnews404.azurewebsites.net/Articles/TopHeadlines?SiteId=1&CategoryId=6&Language=14&Page=1&PageSize=${pageSize}`
+         // `https://newsapi.org/v2/top-headlines?category=technology&language=en&apiKey=${apiKey}&pageSize=${pageSize}`
         );
 
-       
+        
         this.images = response.data.items.map((article) => ({
           urlToImage: article.urlToImage,title:article.title,url:article.url,
         }));

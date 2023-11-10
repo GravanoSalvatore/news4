@@ -1,4 +1,4 @@
-<template lang="">
+<!-- <template lang="">
   <main class="container main">
    
    
@@ -268,10 +268,10 @@
   
       <div class="col-md-4">
         <div class="position-sticky" style="top: 2rem;">
-          <!-- <div class="p-4 mb-3 bg-light rounded">
+        <div class="p-4 mb-3 bg-light rounded">
             <h4 class="fst-italic">About</h4>
             <p class="mb-0">Customize this section to tell your visitors a little bit about your publication, writers, content, or something else entirely. Totally up to you.</p>
-          </div> -->
+          </div> 
   <br/><br/>
           <div class="p-4">
             
@@ -284,10 +284,10 @@
               <li><a href="#">Axie Marketplace</a></li>
               <li><a href="#">WazirX</a></li>
               <li><a href="#">Binance NFT</a></li>
-              <!-- <li><a href="#">July 2020</a></li>
+             <li><a href="#">July 2020</a></li>
               <li><a href="#">June 2020</a></li>
               <li><a href="#">May 2020</a></li>
-              <li><a href="#">April 2020</a></li> -->
+              <li><a href="#">April 2020</a></li> 
             </ol>
           </div>
   
@@ -467,4 +467,17 @@
                   font-size: 60px;
                 }
               }
+  </style> -->
+  <template lang="">
+    <div>
+      
+    </div>
+  </template>
+  <script>
+  export default {
+    
+  }
+  </script>
+  <style lang="">
+    
   </style>

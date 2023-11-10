@@ -3,16 +3,23 @@
 
 
     <navi />
+   
 
-    <div style="margin-top: 20px;">
+    <div style="margin-top: 25px;">
       <router-view />
     </div>
     <!-- <boots6/>  -->
+    <div class="mb-10">
+    <coock/>
+    </div>
+    <geo/>
     <v-footer-component />
   </v-app>
 </template>
 
 <script>
+import geo from './components/Geo.vue'
+import coock from './components/Coockies.vue'
 import boots6 from './components/BootstrapMainPage/v-boots-6.vue'
 import vFooterComponent from './components/footer/v-footer-component.vue'
 import navi from './components/nav/nav-2.vue';
@@ -22,7 +29,9 @@ export default {
     // vNav,
     vFooterComponent,
     navi,
-    boots6
+    boots6,
+    coock,
+    geo
     // search,
     // searchGrid,
     // vNavNav
@@ -52,6 +61,9 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+
+
+
 .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);

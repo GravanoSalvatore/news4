@@ -1,9 +1,11 @@
 
 <template>
   <br/><br/><br/>
+  
   <div>
     <div class="album py-5 ">
       <div class="container">
+        <div id="top"></div>
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
           <div
             class="col"
@@ -21,6 +23,7 @@
                 <p class="card-text">
                   <a :href="item.url" target="_blank">{{ item.title }}</a>
                 </p>
+                <img style="width:30px" :src="item.source_info.img"/>
                 <span class="text-success"> {{ item.source_info.name }}</span>
                 <div class="d-flex justify-content-between align-items-center">
                  
@@ -63,6 +66,22 @@ export default {
         },
       },
       methods: {
+        // scrollToTop(){
+        //   const top = document.getElementById('top');
+        //   top.scrollIntoView({behavior:'smooth'})
+        // },
+       
+//   scrollToTop1() {
+//     const container = document.querySelector('.container');
+//     container.scrollIntoView({ behavior: 'smooth' });
+ 
+//   // ... rest of your methods
+// },
+// scrollToTop1() {
+//     const container = document.querySelector('.container');
+//     const offsetTop = container.getBoundingClientRect().top + window.scrollY;
+//     window.scrollTo({ top: offsetTop, behavior: 'smooth' });
+//   },
         async getData() {
           
           // const apiKey = 'd205e0353aed4e42b97d11c1a88207f0'
@@ -90,12 +109,14 @@ export default {
 
           if (this.currentPage < this.totalPages) {
             this.currentPage++;
+            // this.scrollToTop1()
           }
         },
         prevPage() {
           
           if (this.currentPage > 1) {
             this.currentPage--;
+            // this.scrollToTop1()
           }
         },
       },
@@ -113,6 +134,11 @@ export default {
 };
 </script>
 <style scoped>
+.card-text{
+    overflow-x: hidden;
+    overflow-y: auto;
+     height: 50px;
+  }
 .page-numbers{
   margin-top: 20px;
   color: white;
@@ -121,19 +147,19 @@ export default {
               margin: 13px;
               /* background-color:white; */
               color: white;
-              box-shadow: 0 0 20px 0 rgb(0 0 0 / 50%);
-              border-radius: 2px;
+              /* box-shadow: 0 0 20px 0 rgb(0 0 0 / 50%);
+              border-radius: 2px; */
               padding: 7px;
               font-weight: bold;
               
             }
-            .next-bt:hover,.prev-bt:hover{
+            /* .next-bt:hover,.prev-bt:hover{
               background-image: linear-gradient(to right,#040d1d, #053684);
               color: white;
               
               
           
-            } 
+            }  */
 a{
   text-decoration: none;
   color:white;

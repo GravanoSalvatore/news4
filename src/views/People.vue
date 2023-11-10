@@ -1,4 +1,4 @@
-<template lang="">
+<!-- <template lang="">
     <main class="container main">
      
      
@@ -44,7 +44,7 @@
             </div>
             <div class="col">
               <div class="card shadow-sm">
-                <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="../assets/Michael_Novogratz.jpg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                 <div class="card-body">
                   <p class="card-text">Novogratz Michael</p>
                   <div class="d-flex justify-content-between align-items-center">
@@ -80,7 +80,7 @@
             </div>
             <div class="col">
               <div class="card shadow-sm">
-                <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="../assets/licensed-image (1).jpeg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+                <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
                 <div class="card-body">
                   <p class="card-text">Changpeng Zhao</p>
                   <div class="d-flex justify-content-between align-items-center">
@@ -362,10 +362,10 @@ Sandeep Nailwal's influence in the crypto space serves as an inspiration for bot
     
         <div class="col-md-4">
           <div class="position-sticky" style="top: 2rem;">
-            <!-- <div class="p-4 mb-3 bg-light rounded">
+             <div class="p-4 mb-3 bg-light rounded">
               <h4 class="fst-italic">About</h4>
               <p class="mb-0">Customize this section to tell your visitors a little bit about your publication, writers, content, or something else entirely. Totally up to you.</p>
-            </div> -->
+            </div>
     <br/><br/>
             <div class="p-4">
               
@@ -378,10 +378,10 @@ Sandeep Nailwal's influence in the crypto space serves as an inspiration for bot
                 <li><a href="#">Axie Marketplace</a></li>
                 <li><a href="#">WazirX</a></li>
                 <li><a href="#">Binance NFT</a></li>
-                <!-- <li><a href="#">July 2020</a></li>
+               <li><a href="#">July 2020</a></li>
                 <li><a href="#">June 2020</a></li>
                 <li><a href="#">May 2020</a></li>
-                <li><a href="#">April 2020</a></li> -->
+                <li><a href="#">April 2020</a></li> 
               </ol>
             </div>
     
@@ -570,4 +570,17 @@ Sandeep Nailwal's influence in the crypto space serves as an inspiration for bot
                     height: 220px;
                   }
                 }
+    </style> -->
+    <template lang="">
+      <div>
+        
+      </div>
+    </template>
+    <script>
+    export default {
+      
+    }
+    </script>
+    <style lang="">
+      
     </style>

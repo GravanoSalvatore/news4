@@ -1,4 +1,4 @@
-<template lang="">
+<!-- <template lang="">
   <br/><br/><br/>
    
 
@@ -9,8 +9,8 @@
   <div class="p-4 p-md-5 mb-4 text-white rounded " style="background-image:url('https://www.britwise.com/blog/wp-content/uploads/2019/11/Blockchain-Technology-Cryptocurrencies.jpg')">
     <div class="col-md-6 px-0">
       <h1 class="display-4 fst-italic">Blockchain and cryptocurrency look into the future</h1>
-      <!-- <p class="lead my-3">Multiple lines of text that form the lede, informing new readers quickly and efficiently about what’s most interesting in this post’s contents.</p>
-      <p class="lead mb-0"><a href="#" class="text-white fw-bold">Continue reading...</a></p> -->
+      <p class="lead my-3">Multiple lines of text that form the lede, informing new readers quickly and efficiently about what’s most interesting in this post’s contents.</p>
+      <p class="lead mb-0"><a href="#" class="text-white fw-bold">Continue reading...</a></p> 
     </div>
   </div>
 
@@ -39,7 +39,7 @@
 
       <div class="col">
         <div class="card shadow-sm">
-          <img src="../assets/cryptocurrency-gd0507e3bc_1920.jpg" class="bd-placeholder-img card-img-top" width="100%" height="425"  role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
+          <img src="#" class="bd-placeholder-img card-img-top" width="100%" height="425"  role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
 
           <div class="card-body">
             <p class="card-text text-center"><router-link to="/Crypto" >CryptoNews</router-link>
@@ -146,4 +146,17 @@ a{
   text-decoration: none;
   color: white;
 }
+</style> -->
+<template lang="">
+  <div>
+    
+  </div>
+</template>
+<script>
+export default {
+  
+}
+</script>
+<style lang="">
+  
 </style>
